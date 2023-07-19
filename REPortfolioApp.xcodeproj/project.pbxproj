@@ -17,6 +17,7 @@
 		6340FFBF2A685F260068C35F /* REPortfolioAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340FFBE2A685F260068C35F /* REPortfolioAppTests.swift */; };
 		6340FFC92A685F260068C35F /* REPortfolioAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340FFC82A685F260068C35F /* REPortfolioAppUITests.swift */; };
 		6340FFCB2A685F260068C35F /* REPortfolioAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340FFCA2A685F260068C35F /* REPortfolioAppUITestsLaunchTests.swift */; };
+		637AABF22A68651D00F05C0C /* PhotovolticAnalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637AABF12A68651D00F05C0C /* PhotovolticAnalizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		6340FFC42A685F260068C35F /* REPortfolioAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = REPortfolioAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6340FFC82A685F260068C35F /* REPortfolioAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REPortfolioAppUITests.swift; sourceTree = "<group>"; };
 		6340FFCA2A685F260068C35F /* REPortfolioAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REPortfolioAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		637AABF12A68651D00F05C0C /* PhotovolticAnalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotovolticAnalizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		6340FFA32A685F240068C35F /* REPortfolioApp */ = {
 			isa = PBXGroup;
 			children = (
+				6340FFD72A685FF20068C35F /* Model */,
 				6340FFA42A685F240068C35F /* AppDelegate.swift */,
 				6340FFA62A685F240068C35F /* SceneDelegate.swift */,
 				6340FFA82A685F240068C35F /* ViewController.swift */,
@@ -128,6 +131,14 @@
 				6340FFCA2A685F260068C35F /* REPortfolioAppUITestsLaunchTests.swift */,
 			);
 			path = REPortfolioAppUITests;
+			sourceTree = "<group>";
+		};
+		6340FFD72A685FF20068C35F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				637AABF12A68651D00F05C0C /* PhotovolticAnalizer.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			files = (
 				6340FFA92A685F240068C35F /* ViewController.swift in Sources */,
 				6340FFAF2A685F240068C35F /* REPortfolioApp.xcdatamodeld in Sources */,
+				637AABF22A68651D00F05C0C /* PhotovolticAnalizer.swift in Sources */,
 				6340FFA52A685F240068C35F /* AppDelegate.swift in Sources */,
 				6340FFA72A685F240068C35F /* SceneDelegate.swift in Sources */,
 			);
