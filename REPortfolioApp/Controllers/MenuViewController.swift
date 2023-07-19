@@ -2,7 +2,7 @@
 //  MenuViewController.swift
 //  REPortfolioApp
 //
-//  Created by Desi Nikolova on 2023-07-19.
+//  Created by Joanna Nikolova on 2023-07-19.
 //
 
 import Foundation
@@ -19,30 +19,45 @@ class MenuViewController:UITableViewController{
                    "Geothermal",
                    "Nuclear"]
     
-    let optionsSolar = ["Solar - Photovoltaic",
-                        "Solar - Photovoltaic Thermal"]
+    let optionsSolar = ["Solar - Photovoltaic (PV)",
+                        "Solar - PV Thermal (PVT)"]
     
-    override func viewWillLayoutSubviews() {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         menu?.delegate = self
+        menu?.reloadData()
         
-        super.viewWillLayoutSubviews()
+        self.view.backgroundColor = ThemeColorSeaGreen
+        menu?.backgroundView = nil
+        
+        tableView.backgroundColor = ThemeColorSeaGreen
+        self.view.backgroundColor = ThemeColorSeaGreen
+        tableView.layoutSubviews()
+        self.view.superview?.backgroundColor = ThemeColorSeaGreen
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuItem
+        cell.title?.text = optionsSolar[indexPath.row]
+        for v in tableView.subviews{
+            v.backgroundColor = ThemeColorSeaGreen
+        }
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 //optionsSolar.count
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
+        return optionsSolar.count
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
+    
 }
