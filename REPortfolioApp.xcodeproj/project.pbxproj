@@ -21,6 +21,11 @@
 		637AABF52A688C1100F05C0C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637AABF42A688C1100F05C0C /* MenuViewController.swift */; };
 		637AABF82A68908B00F05C0C /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637AABF72A68908B00F05C0C /* MenuItem.swift */; };
 		637AABFB2A68973E00F05C0C /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637AABFA2A68973E00F05C0C /* AppTheme.swift */; };
+		638100E62A698570009D9418 /* UIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638100E52A698570009D9418 /* UIFactory.swift */; };
+		638100E82A6987F5009D9418 /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638100E72A6987F5009D9418 /* MainMapView.swift */; };
+		638100EA2A698928009D9418 /* InputParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638100E92A698928009D9418 /* InputParametersView.swift */; };
+		638100EC2A69893F009D9418 /* SimulationOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638100EB2A69893F009D9418 /* SimulationOutputView.swift */; };
+		638100EE2A698A15009D9418 /* ForecastAndAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638100ED2A698A15009D9418 /* ForecastAndAnalysisViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		637AABF42A688C1100F05C0C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		637AABF72A68908B00F05C0C /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		637AABFA2A68973E00F05C0C /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		638100E52A698570009D9418 /* UIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFactory.swift; sourceTree = "<group>"; };
+		638100E72A6987F5009D9418 /* MainMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
+		638100E92A698928009D9418 /* InputParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputParametersView.swift; sourceTree = "<group>"; };
+		638100EB2A69893F009D9418 /* SimulationOutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationOutputView.swift; sourceTree = "<group>"; };
+		638100ED2A698A15009D9418 /* ForecastAndAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastAndAnalysisViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +163,7 @@
 			children = (
 				6340FFA82A685F240068C35F /* ViewController.swift */,
 				637AABF42A688C1100F05C0C /* MenuViewController.swift */,
+				638100ED2A698A15009D9418 /* ForecastAndAnalysisViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -160,6 +171,10 @@
 		637AABF62A68907200F05C0C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				638100E72A6987F5009D9418 /* MainMapView.swift */,
+				638100E92A698928009D9418 /* InputParametersView.swift */,
+				638100EB2A69893F009D9418 /* SimulationOutputView.swift */,
+				638100E42A698556009D9418 /* UIFactory */,
 				637AABF92A68909800F05C0C /* Menu */,
 				637AABFA2A68973E00F05C0C /* AppTheme.swift */,
 			);
@@ -172,6 +187,14 @@
 				637AABF72A68908B00F05C0C /* MenuItem.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		638100E42A698556009D9418 /* UIFactory */ = {
+			isa = PBXGroup;
+			children = (
+				638100E52A698570009D9418 /* UIFactory.swift */,
+			);
+			path = UIFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,13 +328,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638100EA2A698928009D9418 /* InputParametersView.swift in Sources */,
+				638100EE2A698A15009D9418 /* ForecastAndAnalysisViewController.swift in Sources */,
 				637AABF82A68908B00F05C0C /* MenuItem.swift in Sources */,
+				638100EC2A69893F009D9418 /* SimulationOutputView.swift in Sources */,
 				6340FFA92A685F240068C35F /* ViewController.swift in Sources */,
 				637AABF52A688C1100F05C0C /* MenuViewController.swift in Sources */,
 				6340FFAF2A685F240068C35F /* REPortfolioApp.xcdatamodeld in Sources */,
+				638100E82A6987F5009D9418 /* MainMapView.swift in Sources */,
 				637AABF22A68651D00F05C0C /* PhotovoltaicAnalizer.swift in Sources */,
 				637AABFB2A68973E00F05C0C /* AppTheme.swift in Sources */,
 				6340FFA52A685F240068C35F /* AppDelegate.swift in Sources */,
+				638100E62A698570009D9418 /* UIFactory.swift in Sources */,
 				6340FFA72A685F240068C35F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

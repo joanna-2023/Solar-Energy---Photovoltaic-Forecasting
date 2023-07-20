@@ -11,6 +11,10 @@ class ViewController: UIViewController {
 
     let pvSimulationAnalizer = PVSimulationAnalysis.shared
     
+    @IBOutlet var mainMap:MainMapView?
+    @IBOutlet var inputParameters:InputParametersView?
+    @IBOutlet var simulationOutput:SimulationOutputView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

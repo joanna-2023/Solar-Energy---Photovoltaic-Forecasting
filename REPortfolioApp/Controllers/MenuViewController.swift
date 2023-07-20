@@ -11,6 +11,7 @@ import UIKit
 class MenuViewController:UITableViewController{
     
     @IBOutlet var menu:UITableView?
+    static let shared = UIFactory()
     
     let options = ["Solar",
                    "Wind",
@@ -42,18 +43,34 @@ class MenuViewController:UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuItem
         cell.title?.text = optionsSolar[indexPath.row]
+        if indexPath.section >= 1{
+            cell.title?.text = "Coming soon"
+        }
         for v in tableView.subviews{
             v.backgroundColor = ThemeColorSeaGreen
         }
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let v = UIFactory.designMenuHeader(title: options[section],
+                                               tableView:  tableView)
+        return v
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section >= 1{
+            return 1
+        }
         return optionsSolar.count
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return options.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return options[section]
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

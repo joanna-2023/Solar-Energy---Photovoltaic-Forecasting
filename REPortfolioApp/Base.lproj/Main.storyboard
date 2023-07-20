@@ -42,7 +42,7 @@
                                     <segue destination="g7L-K0-7jN" kind="embed" id="mmz-Wk-ks7"/>
                                 </connections>
                             </containerView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ir-m4-yQW">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ir-m4-yQW" customClass="MainMapView" customModule="REPortfolioApp" customModuleProvider="target">
                                 <rect key="frame" x="258" y="65" width="684" height="421"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="421" id="yku-Cx-bQU"/>
@@ -56,7 +56,7 @@
                                     <segue destination="K4O-HY-VpV" kind="embed" id="QfR-D6-CYa"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ork-fs-3EQ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ork-fs-3EQ" customClass="InputParametersView" customModule="REPortfolioApp" customModuleProvider="target">
                                 <rect key="frame" x="954" y="65" width="228" height="421"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Solar Farm Site Parameters to Generate a Forecast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sf2-TT-nST">
@@ -77,7 +77,7 @@
                                     <constraint firstItem="sf2-TT-nST" firstAttribute="top" secondItem="ork-fs-3EQ" secondAttribute="top" constant="17" id="tQl-7B-M6K"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaJ-VW-k3b">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaJ-VW-k3b" customClass="SimulationOutputView" customModule="REPortfolioApp" customModuleProvider="target">
                                 <rect key="frame" x="954" y="494" width="228" height="265"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generated Forecast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-EM-Jk6">
@@ -127,6 +127,11 @@
                             <constraint firstItem="ork-fs-3EQ" firstAttribute="top" secondItem="TTL-1M-6nY" secondAttribute="bottom" constant="21" id="yYO-SR-JUp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputParameters" destination="ork-fs-3EQ" id="Ys5-Te-6Qj"/>
+                        <outlet property="mainMap" destination="9Ir-m4-yQW" id="7MZ-Il-7kL"/>
+                        <outlet property="simulationOutput" destination="NaJ-VW-k3b" id="aGG-Rm-3Uj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,13 +198,14 @@
             </objects>
             <point key="canvasLocation" x="-409.04522613065325" y="-35.251798561151084"/>
         </scene>
-        <!--View Controller-->
+        <!--Forecast And Analysis View Controller-->
         <scene sceneID="LvI-EO-YIC">
             <objects>
-                <viewController id="K4O-HY-VpV" sceneMemberID="viewController">
+                <viewController id="K4O-HY-VpV" customClass="ForecastAndAnalysisViewController" customModule="REPortfolioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yNk-qg-ads">
                         <rect key="frame" x="0.0" y="0.0" width="684" height="265"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pAn-N2-at0"/>
                         <color key="backgroundColor" red="0.36340702349999998" green="0.73677704730000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-let ThemeColorSeaGreen:UIColor = UIColor(red: 161,
-                                         green: 227,
-                                         blue: 230,
+let ThemeColorSeaGreen:UIColor = UIColor(red: 161/255,
+                                         green: 227/255,
+                                         blue: 230/255,
                                          alpha: 1.0)
