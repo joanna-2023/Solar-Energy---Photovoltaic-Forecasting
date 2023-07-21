@@ -9,5 +9,7 @@ import Foundation
 import UIKit
 
 class InputParametersView:CustomContainerView{
-    
+    @IBOutlet var latitudeTxtField:UITextField?
+    @IBOutlet var longitudeTxtField:UITextField?
+    @IBOutlet var numberOfModulesTxtField:UITextField?
 }
