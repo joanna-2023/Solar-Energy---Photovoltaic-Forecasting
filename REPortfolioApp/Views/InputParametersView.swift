@@ -8,6 +8,6 @@
 import Foundation
 import UIKit
 
-class InputParametersView:UIView{
+class InputParametersView:CustomContainerView{
     
 }

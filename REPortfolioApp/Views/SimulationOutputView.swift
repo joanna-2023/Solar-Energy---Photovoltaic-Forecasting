@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
-class SimulationOutputView:UIView{
+class SimulationOutputView:CustomContainerView{
+    
     
 }

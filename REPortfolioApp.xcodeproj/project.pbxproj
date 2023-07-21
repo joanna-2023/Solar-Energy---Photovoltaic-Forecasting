@@ -26,6 +26,7 @@
 		638100EA2A698928009D9418 /* InputParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638100E92A698928009D9418 /* InputParametersView.swift */; };
 		638100EC2A69893F009D9418 /* SimulationOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638100EB2A69893F009D9418 /* SimulationOutputView.swift */; };
 		638100EE2A698A15009D9418 /* ForecastAndAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638100ED2A698A15009D9418 /* ForecastAndAnalysisViewController.swift */; };
+		63C2D22C2A6A214800E37638 /* CustomContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C2D22B2A6A214800E37638 /* CustomContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		638100E92A698928009D9418 /* InputParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputParametersView.swift; sourceTree = "<group>"; };
 		638100EB2A69893F009D9418 /* SimulationOutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationOutputView.swift; sourceTree = "<group>"; };
 		638100ED2A698A15009D9418 /* ForecastAndAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastAndAnalysisViewController.swift; sourceTree = "<group>"; };
+		63C2D22B2A6A214800E37638 /* CustomContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				638100E52A698570009D9418 /* UIFactory.swift */,
+				63C2D22B2A6A214800E37638 /* CustomContainerView.swift */,
 			);
 			path = UIFactory;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				638100EA2A698928009D9418 /* InputParametersView.swift in Sources */,
+				63C2D22C2A6A214800E37638 /* CustomContainerView.swift in Sources */,
 				638100EE2A698A15009D9418 /* ForecastAndAnalysisViewController.swift in Sources */,
 				637AABF82A68908B00F05C0C /* MenuItem.swift in Sources */,
 				638100EC2A69893F009D9418 /* SimulationOutputView.swift in Sources */,

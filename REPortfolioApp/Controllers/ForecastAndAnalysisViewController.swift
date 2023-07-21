@@ -10,4 +10,8 @@ import UIKit
 
 class ForecastAndAnalysisViewController:UIViewController{
     
+    override func viewDidLoad() {
+        UIFactory.styleMainSection(section: self.view)
+        
+    }
 }
