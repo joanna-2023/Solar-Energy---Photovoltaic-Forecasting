@@ -12,4 +12,10 @@ class InputParametersView:CustomContainerView{
     @IBOutlet var latitudeTxtField:UITextField?
     @IBOutlet var longitudeTxtField:UITextField?
     @IBOutlet var numberOfModulesTxtField:UITextField?
+    
+    func setValues(){
+        latitudeTxtField?.text = String(format: "%.2f", AppModel.siteLat())
+        longitudeTxtField?.text = String(format: "%.2f", AppModel.siteLon())
+        numberOfModulesTxtField?.text = String(format: "%d", AppModel.modsNum())
+    }
 }

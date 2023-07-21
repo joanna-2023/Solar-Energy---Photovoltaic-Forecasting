@@ -32,9 +32,12 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         
         //MAP
-        let mapCenter = CLLocationCoordinate2D(latitude:40.0,
-                                            longitude:-118.0)
+        let mapCenter = CLLocationCoordinate2D(latitude:AppModel.siteLat(),
+                                               longitude:AppModel.siteLon())
         mainMap?.setCenter(mapCenter, animated: true)
+        
+        //INPUT
+        inputParameters?.setValues()
     }
 
 }
