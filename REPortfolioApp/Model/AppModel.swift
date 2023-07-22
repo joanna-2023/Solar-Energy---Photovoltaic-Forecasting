@@ -12,6 +12,10 @@ class AppModel{
     static var siteLatitude:Double = 40.0
     static var siteLongitude:Double = -118.0
     
+    static var solarCompanies = ["Sunpower",
+                                 "Sunrun",
+                                 "Canadian Solar",
+                                 "Jinko Solar"]
     static var modulesNum = 50
     
     //GET
