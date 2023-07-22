@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+//enum ForecastType{
+     //let daily:Int,
+    //let weekly:Int
+//}
+
 class AppModel{
     static var siteLatitude:Double = 40.0
     static var siteLongitude:Double = -118.0
@@ -17,6 +22,8 @@ class AppModel{
                                  "Canadian Solar",
                                  "Jinko Solar"]
     static var modulesNum = 50
+    static var company = "Sunpower"
+    static var forecast = "daily"
     
     //GET
     static func siteLat()->Double{

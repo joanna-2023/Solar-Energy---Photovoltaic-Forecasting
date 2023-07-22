@@ -26,13 +26,10 @@ class MenuViewController:UITableViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         menu?.delegate = self
         menu?.reloadData()
-        
         menu?.backgroundView = nil
         tableView.layoutSubviews()
-        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

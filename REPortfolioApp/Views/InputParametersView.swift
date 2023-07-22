@@ -14,8 +14,20 @@ class InputParametersView:CustomContainerView, UITextFieldDelegate, UIPickerView
     @IBOutlet var longitudeTxtField:UITextField?
     @IBOutlet var numberOfModulesTxtField:UITextField?
     @IBOutlet var moduleModelSelection:UIPickerView?
+    @IBOutlet var generateForecastBtn:UIButton?
     
+    var controllerDelegate:ViewController?
     
+    //Generate a new forecast -
+    @IBAction func generateForecast(){
+        AppModel.siteLatitude = (latitudeTxtField?.text as? NSString)!.doubleValue
+        AppModel.siteLongitude = (longitudeTxtField?.text as? NSString)!.doubleValue
+        AppModel.modulesNum = (numberOfModulesTxtField?.text as? NSString)!.integerValue
+        AppModel.company = AppModel.solarCompanies[0]
+        controllerDelegate?.generateForecast()
+    }
+    
+    //Configure the UI and update values -
     func setValues(){
         //Assign current values: input parameters -
         latitudeTxtField?.text = String(format: "%.2f", AppModel.siteLat())
@@ -67,16 +79,12 @@ class InputParametersView:CustomContainerView, UITextFieldDelegate, UIPickerView
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("output:",textField.text as? CGFloat)
-        
         if textField == latitudeTxtField{
-            //let value = NSNumber(<#UnsafeRawPointer#>, withObjCType: textField.text)
             
-            //AppModel.siteLatitude = Double(
         }else if textField == longitudeTxtField{
-            //AppModel.siteLatitude = Double(
+            
         }else if textField == numberOfModulesTxtField{
-            //AppModel.siteLatitude = Double(
+           
         }
     }
     

@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         pvSimulationAnalizer.baseURLRequest()
-        //
         inputParameters?.style()
         simulationOutput?.style()
         mainMap?.style()
@@ -37,7 +36,15 @@ class ViewController: UIViewController {
         mainMap?.setCenter(mapCenter, animated: true)
         
         //INPUT
+        inputParameters?.controllerDelegate = self
         inputParameters?.setValues()
+    }
+    
+    func generateForecast(){
+        let mapCenter = CLLocationCoordinate2D(latitude:AppModel.siteLat(),
+                                               longitude:AppModel.siteLon())
+        mainMap?.setCenter(mapCenter, animated: true)
+        
     }
 
 }

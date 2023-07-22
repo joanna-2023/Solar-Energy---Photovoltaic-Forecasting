@@ -173,6 +173,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Generate"/>
+                                        <connections>
+                                            <action selector="generateForecast" destination="ork-fs-3EQ" eventType="touchUpInside" id="ScR-X0-9eT"/>
+                                        </connections>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LXd-5l-otf">
                                         <rect key="frame" x="21" y="430" width="170" height="32"/>
@@ -217,6 +220,7 @@
                                     <constraint firstItem="FqR-Dt-5JI" firstAttribute="top" secondItem="c4G-4W-Fuc" secondAttribute="bottom" constant="29" id="yFi-9X-gWI"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="generateForecastBtn" destination="s7R-vu-PDl" id="9oE-KL-YxO"/>
                                     <outlet property="latitudeTxtField" destination="0kg-wS-YKa" id="rCN-4l-OEO"/>
                                     <outlet property="longitudeTxtField" destination="c4G-4W-Fuc" id="3UG-47-QDA"/>
                                     <outlet property="moduleModelSelection" destination="WUL-dD-YsO" id="UJO-vM-4ze"/>
