@@ -58,7 +58,10 @@ class InputParametersView:CustomContainerView, UITextFieldDelegate, UIPickerView
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        print(textField.text as? CGFloat)
         if textField == latitudeTxtField{
+            //let value = NSNumber(<#UnsafeRawPointer#>, withObjCType: textField.text)
+            
             //AppModel.siteLatitude = Double(
         }else if textField == longitudeTxtField{
             //AppModel.siteLatitude = Double(
