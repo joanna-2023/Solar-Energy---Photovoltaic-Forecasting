@@ -30,13 +30,8 @@ class MenuViewController:UITableViewController{
         menu?.delegate = self
         menu?.reloadData()
         
-        self.view.backgroundColor = ThemeColorSeaGreen
         menu?.backgroundView = nil
-        
-        tableView.backgroundColor = ThemeColorSeaGreen
-        self.view.backgroundColor = ThemeColorSeaGreen
         tableView.layoutSubviews()
-        self.view.superview?.backgroundColor = ThemeColorSeaGreen
         
     }
     
@@ -47,7 +42,7 @@ class MenuViewController:UITableViewController{
             cell.title?.text = "Coming soon"
         }
         for v in tableView.subviews{
-            v.backgroundColor = ThemeColorSeaGreen
+            //v.backgroundColor = ThemeColorDuskSky
         }
         return cell
     }

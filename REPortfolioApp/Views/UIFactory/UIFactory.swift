@@ -28,7 +28,7 @@ class UIFactory{
         f.size.height = 34
         let l = UILabel(frame: f)
         l.text = title
-        v.backgroundColor = ThemeColorSeaGreen
+        //v.backgroundColor = ThemeColorDuskSky
         v.addSubview(l)
         v.layoutSubviews()
         return v;

@@ -57,8 +57,18 @@ class InputParametersView:CustomContainerView, UITextFieldDelegate, UIPickerView
         
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        let num = (textField.text as? NSString)!.floatValue
+        print("output:%f",num)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print(textField.text as? CGFloat)
+        print("output:",textField.text as? CGFloat)
+        
         if textField == latitudeTxtField{
             //let value = NSNumber(<#UnsafeRawPointer#>, withObjCType: textField.text)
             
@@ -68,5 +78,9 @@ class InputParametersView:CustomContainerView, UITextFieldDelegate, UIPickerView
         }else if textField == numberOfModulesTxtField{
             //AppModel.siteLatitude = Double(
         }
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
     }
 }

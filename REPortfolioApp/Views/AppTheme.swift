@@ -11,4 +11,8 @@ import UIKit
 let ThemeColorSeaGreen:UIColor = UIColor(red: 161/255,
                                          green: 227/255,
                                          blue: 230/255,
-                                         alpha: 1.0)
+                                         alpha: 0.95)
+let ThemeColorDuskSky:UIColor = UIColor(red: 93/255,
+                                         green: 188/255,
+                                         blue: 230/255,
+                                         alpha: 0.95)
