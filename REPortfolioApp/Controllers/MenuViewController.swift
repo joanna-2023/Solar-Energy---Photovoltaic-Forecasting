@@ -20,8 +20,8 @@ class MenuViewController:UITableViewController{
                    "Geothermal",
                    "Nuclear"]
     
-    let optionsSolar = ["Solar - Photovoltaic (PV)",
-                        "Solar - PV Thermal (PVT)"]
+    let optionsSolar = ["Photovoltaic (PV)",
+                        "PV Thermal (PVT)"]
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,6 +29,7 @@ class MenuViewController:UITableViewController{
         menu?.delegate = self
         menu?.reloadData()
         menu?.backgroundView = nil
+        UIFactory.styleMainSection(section: self.tableView)
         tableView.layoutSubviews()
     }
     

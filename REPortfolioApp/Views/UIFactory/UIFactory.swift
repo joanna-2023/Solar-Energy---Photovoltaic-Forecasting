@@ -14,6 +14,8 @@ class UIFactory{
     static func styleMainSection(section:UIView){
         section.layer.cornerRadius = 5
         section.layer.shadowOffset = CGSize(width:5,height:5)
+        section.layer.borderColor = UIColor.tintColor.cgColor
+        section.layer.borderWidth = 0.44
     }
     
     
