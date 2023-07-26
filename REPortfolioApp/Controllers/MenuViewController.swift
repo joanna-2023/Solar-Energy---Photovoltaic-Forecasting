@@ -29,7 +29,7 @@ class MenuViewController:UITableViewController{
         menu?.delegate = self
         menu?.reloadData()
         menu?.backgroundView = nil
-        UIFactory.styleMainSection(section: self.tableView)
+        //UIFactory.styleMainSection(section: self.tableView)
         tableView.layoutSubviews()
     }
     
