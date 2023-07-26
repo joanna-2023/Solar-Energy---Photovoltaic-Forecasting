@@ -18,6 +18,11 @@ class PVSimulationAnalysis: ObservableObject{
     func baseURLRequest(){
         
         //Define the base URL
+        
+        // LOCAL:
+        // http://127.0.0.1:5000/energyGeneration
+        
+        //REMOTE:
         var baseURL = "https://joannanikolova2023.pythonanywhere.com"
         guard var urlComponents = URLComponents(string: baseURL) else{
             return print("error")

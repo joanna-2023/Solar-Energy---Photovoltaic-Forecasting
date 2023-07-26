@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet var mainMap:MainMapView?
     @IBOutlet var inputParameters:InputParametersView?
     @IBOutlet var simulationOutput:SimulationOutputView?
+    //
+    @IBOutlet var tableContainer:CustomContainerView?
+    @IBOutlet var weatherContainer:CustomContainerView?
+    @IBOutlet var forecastOuterContainer:CustomContainerView?
+    @IBOutlet var mapContainer:CustomContainerView?
     @IBOutlet var forecastContainer:CustomContainerView?
     
     override func viewDidLoad() {
@@ -25,6 +30,10 @@ class ViewController: UIViewController {
         simulationOutput?.style()
         mainMap?.style()
         forecastContainer?.style()
+        tableContainer?.style()
+        weatherContainer?.style()
+        forecastOuterContainer?.style()
+        mapContainer?.style()
     }
     
     override func viewDidAppear(_ animated: Bool) {
