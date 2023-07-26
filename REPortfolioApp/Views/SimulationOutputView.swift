@@ -2,7 +2,7 @@
 //  SimulationOutputView.swift
 //  REPortfolioApp
 //
-//  Created by Joanna (Desislava) Nikolova on 2023-07-20.
+//  Created by Desi (Desislava) Nikolova on 2023-07-20.
 //
 
 import Foundation

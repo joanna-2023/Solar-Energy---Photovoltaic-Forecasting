@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  REPortfolioApp
 //
-//  Created by Joanna Nikolova on 2023-07-19.
+//  Created by Desi Nikolova on 2023-07-19.
 //
 
 import UIKit

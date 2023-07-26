@@ -14,14 +14,15 @@ import UIKit
 //}
 
 class AppModel{
-    static var siteLatitude:Double = 40.0
-    static var siteLongitude:Double = -118.0
+    static var siteName:String = "Tucson"
+    static var siteLatitude:Double = 32.2
+    static var siteLongitude:Double = -111.0
     
     static var solarCompanies = ["Sunpower",
                                  "Sunrun",
                                  "Canadian Solar",
                                  "Jinko Solar"]
-    static var modulesNum = 50
+    static var modulesNum = 700
     static var company = "Sunpower"
     static var forecast = "daily"
     

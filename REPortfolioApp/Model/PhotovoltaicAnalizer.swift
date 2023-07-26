@@ -3,7 +3,7 @@
 //  PVSimulationAnalysis.swift
 //  Portfolio
 //
-//  Created by Joanna Nikolova on 2023-07-19.
+//  Created by Desi Nikolova on 2023-07-19.
 //
 
 import Foundation
@@ -23,7 +23,7 @@ class PVSimulationAnalysis: ObservableObject{
         // http://127.0.0.1:5000/energyGeneration
         
         //REMOTE:
-        var baseURL = "https://joannanikolova2023.pythonanywhere.com"
+        var baseURL = "http://127.0.0.1:5000/energyGeneration" //"https://joannanikolova2023.pythonanywhere.com"
         guard var urlComponents = URLComponents(string: baseURL) else{
             return print("error")
         }
