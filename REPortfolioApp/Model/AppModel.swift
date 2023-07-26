@@ -17,6 +17,7 @@ class AppModel{
     static var siteName:String = "Tucson"
     static var siteLatitude:Double = 32.2
     static var siteLongitude:Double = -111.0
+    static var siteGMTZone:String = "Etc/GMT+7"
     
     static var solarCompanies = ["Sunpower",
                                  "Sunrun",

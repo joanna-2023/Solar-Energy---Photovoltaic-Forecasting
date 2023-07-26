@@ -23,19 +23,26 @@ class PVSimulationAnalysis: ObservableObject{
         // http://127.0.0.1:5000/energyGeneration
         
         //REMOTE:
-        var baseURL = "http://127.0.0.1:5000/energyGeneration" //"https://joannanikolova2023.pythonanywhere.com"
+        //"https://joannanikolova2023.pythonanywhere.com"
+        
+        
+        var baseURL = "http://127.0.0.1:5000/energyGeneration"
         guard var urlComponents = URLComponents(string: baseURL) else{
             return print("error")
         }
         
         // Build the request - path and parameters
         //urlComponents.path.append("/mysite/pv")
+        
+        let l = NSNumber(value: AppModel.siteLatitude)
+        let lg = NSNumber(value: AppModel.siteLongitude)
+        let nm = NSNumber(value: AppModel.modulesNum)
         urlComponents.queryItems = [
-                                    URLQueryItem(name: "coordinate-lat", value: "134"),
-                                    URLQueryItem(name: "coordinate-long", value: "130"),
-                                    URLQueryItem(name: "forecast-type", value: "daily"),
-                                    URLQueryItem(name: "number of panels", value: "50"),
-                                    URLQueryItem(name: "panels-model", value: "Solar Ltd")
+            URLQueryItem(name: "lat", value: l.stringValue),
+            URLQueryItem(name: "long", value: lg.stringValue),
+            URLQueryItem(name: "numModules", value: nm.stringValue),
+            URLQueryItem(name: "siteName", value: AppModel.siteName),
+            URLQueryItem(name: "gmtZone", value: AppModel.siteGMTZone)
         ]
         
         guard let url = urlComponents.url else{
