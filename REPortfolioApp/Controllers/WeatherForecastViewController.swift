@@ -10,10 +10,33 @@ import UIKit
 
 class WeatherForecastViewController:UICollectionViewController{
     
-    //TODO: Define size and so on as per the Swift manual - 
+    //Generate the collection view layout -
     
+    private func generateLayout() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(
+        widthDimension: .fractionalWidth(1.0),
+        heightDimension: .fractionalHeight(1.0)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .absolute(50.0*5),
+            heightDimension: .absolute(55.0)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitem: item,
+            count: 5
+        )
+        let section = NSCollectionLayoutSection(group: group)
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
+    }
+    
+    //Assign the layout - 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView.setCollectionViewLayout(generateLayout(),animated: false)
+                                             
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.reloadData()
@@ -32,3 +55,5 @@ class WeatherForecastViewController:UICollectionViewController{
         return cell
     }
 }
+
+

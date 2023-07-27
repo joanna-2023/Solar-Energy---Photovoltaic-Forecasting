@@ -342,7 +342,7 @@
                                         <rect key="frame" x="8" y="290" width="214" height="206"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <connections>
-                                            <segue destination="Gk0-Vb-ZIC" kind="embed" id="wHo-3h-XwP"/>
+                                            <segue destination="pKx-Gw-igT" kind="embed" id="mox-hc-JIf"/>
                                         </connections>
                                     </containerView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="E6j-sx-deo">
@@ -429,6 +429,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dayWeekMonth" destination="E6j-sx-deo" id="Th2-eJ-Hng"/>
                         <outlet property="forecastContainer" destination="4WY-DB-s8J" id="C4P-Uh-bPi"/>
                         <outlet property="inputParameters" destination="ork-fs-3EQ" id="Ys5-Te-6Qj"/>
                         <outlet property="mainMap" destination="9Ir-m4-yQW" id="7MZ-Il-7kL"/>
@@ -547,7 +548,7 @@
             <objects>
                 <viewController id="Gk0-Vb-ZIC" customClass="WeatherViewController" customModule="REPortfolioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r3e-Nz-FpN">
-                        <rect key="frame" x="0.0" y="0.0" width="214" height="206"/>
+                        <rect key="frame" x="0.0" y="0.0" width="194" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="poc-hR-bA4">
@@ -770,10 +771,11 @@
                         <viewLayoutGuide key="safeArea" id="bio-Nw-9Y1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <size key="freeformSize" width="194" height="200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HX6-Oe-jKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375" y="63"/>
+            <point key="canvasLocation" x="-490" y="135"/>
         </scene>
         <!--Weather Forecast View Controller-->
         <scene sceneID="PCm-LO-I3K">
@@ -837,7 +839,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAE-Dc-NiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375.37688442211055" y="253.95683453237413"/>
+            <point key="canvasLocation" x="-366" y="129"/>
         </scene>
     </scenes>
     <resources>

@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet var forecastOuterContainer:CustomContainerView?
     @IBOutlet var mapContainer:CustomContainerView?
     @IBOutlet var forecastContainer:CustomContainerView?
+    //
+    @IBOutlet var dayWeekMonth:UISegmentedControl?
     
     override func viewDidLoad() {
         super.viewDidLoad()
