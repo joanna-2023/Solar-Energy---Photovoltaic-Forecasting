@@ -11,10 +11,14 @@ import UIKit
 class WeatherForecastViewController:UICollectionViewController{
     
     var selectedIndexPath:IndexPath = IndexPath(row: 0, section: 0)
+    let weatherModel = WeatherData()
+    var observations = Array<WeatherObservation>()
     //Always show a month, but allow selection to vary
     
     func updateForecast(){
+        observations = weatherModel.allDaysInMonth()
         self.collectionView.reloadData()
+       
     }
     
     //Generate the collection view layout -
@@ -42,8 +46,8 @@ class WeatherForecastViewController:UICollectionViewController{
     //Assign the layout -
     override func viewDidLoad() {
         super.viewDidLoad()
+        observations = weatherModel.allDaysInMonth()
         self.collectionView.setCollectionViewLayout(generateLayout(),animated: false)
-                                             
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.reloadData()
@@ -59,6 +63,15 @@ class WeatherForecastViewController:UICollectionViewController{
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weather", for: indexPath) as! WeatherCollectionCell
+        
+        //Assign day and weekday -
+        if(indexPath.section * 5 + indexPath.row) <= 30{
+            let wo = observations[indexPath.section * 5 + indexPath.row]
+            print(wo.dayOfWeek,wo.dayOfMonth, indexPath.section * indexPath.row + indexPath.row)
+            cell.iconView?.date?.text = String(format: "%@,%d", wo.dayOfWeek,wo.dayOfMonth)
+        }
+        
+        //Style based on selection and period choice -
         cell.iconView?.clearStyles()
         var startSection = selectedIndexPath.section
         var startRow = selectedIndexPath.row
@@ -87,7 +100,7 @@ class WeatherForecastViewController:UICollectionViewController{
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.section,indexPath.row)
+        //print(indexPath.section,indexPath.row)
         selectedIndexPath = indexPath
         self.collectionView.reloadData()
     }
