@@ -10,6 +10,7 @@ import UIKit
 
 class WeatherForecastViewController:UICollectionViewController{
     
+    var selectedIndexPath:IndexPath = IndexPath(row: 0, section: 0)
     //Always show a month, but allow selection to vary
     
     func updateForecast(){
@@ -59,16 +60,22 @@ class WeatherForecastViewController:UICollectionViewController{
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weather", for: indexPath) as! WeatherCollectionCell
         cell.iconView?.clearStyles()
-        if WeatherData.selectedWeatherPeriod == 0{
-            if indexPath.row == 0 && indexPath.section == 0{
+        var startSection = selectedIndexPath.section
+        var startRow = selectedIndexPath.row
+        if indexPath.row == selectedIndexPath.row &&
+           indexPath.section == selectedIndexPath.section{
+            cell.iconView?.styleSelected()
+        }
+        if  WeatherData.selectedWeatherPeriod == 1{
+            if indexPath.section == startSection &&
+                indexPath.row >= startRow{
                 cell.iconView?.styleSelected()
             }
-        }else if  WeatherData.selectedWeatherPeriod == 1{
-            if indexPath.section == 0{
-                cell.iconView?.styleSelected()
-            }
-            if indexPath.row < 2 && indexPath.section == 1{
-                cell.iconView?.styleSelected()
+            if indexPath.section == startSection + 1{
+                if abs(7 - startRow) <= (7 - indexPath.row)+1{
+                    cell.iconView?.styleSelected()
+                }
+               
             }
         }else if  WeatherData.selectedWeatherPeriod == 2{
             cell.iconView?.styleSelected()
@@ -80,7 +87,9 @@ class WeatherForecastViewController:UICollectionViewController{
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        print(indexPath.section,indexPath.row)
+        selectedIndexPath = indexPath
+        self.collectionView.reloadData()
     }
 }
 

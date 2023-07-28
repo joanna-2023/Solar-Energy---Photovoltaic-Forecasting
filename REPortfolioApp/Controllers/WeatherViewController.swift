@@ -16,7 +16,6 @@ class WeatherViewController:UIViewController{
         super.viewDidLoad()
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         weatherForecastVC = storyBoard.instantiateViewController(identifier: "WeatherForecastViewController")
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
