@@ -21,9 +21,11 @@ class ViewController: UIViewController {
     @IBOutlet var forecastOuterContainer:CustomContainerView?
     @IBOutlet var mapContainer:CustomContainerView?
     @IBOutlet var forecastContainer:CustomContainerView?
-    //
-    @IBOutlet var dayWeekMonth:UISegmentedControl?
     
+    @IBOutlet var dayWeekMonth:UISegmentedControl?
+    @IBOutlet var weatherForecastContainer:CustomContainerView?
+    var weatherForecastVC:WeatherForecastViewController?
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -58,5 +60,26 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func dayWeekMonthlyWeatherViewChange(control:UISegmentedControl){
+        print(control.selectedSegmentIndex)
+        WeatherData.selectedWeatherPeriod = control.selectedSegmentIndex
+        weatherForecastVC?.updateForecast()
+        
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "weather-view"{
+            // Assign the weather forcast and update
+            // the view in the above functions
+        }
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "weather-view" {
+            let controller = segue.destination as! WeatherForecastViewController
+            weatherForecastVC = controller
+        }
+    }
 }
 

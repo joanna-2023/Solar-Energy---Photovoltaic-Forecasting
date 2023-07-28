@@ -11,6 +11,13 @@ import UIKit
 class WeahterIconView:UIView{
     @IBOutlet var icon:UIImageView?
     @IBOutlet var degrees:UILabel?
+    @IBOutlet var date:UILabel?
+    
+    func styleSelected(){
+        self.layer.cornerRadius = 5.0
+        self.layer.borderColor = ThemeColorDuskSky.cgColor
+        self.layer.backgroundColor = ThemeColorSeaGreen.cgColor
+    }
     
     func setSunny(value:Float){
         icon?.image = UIImage(named: "sunny")

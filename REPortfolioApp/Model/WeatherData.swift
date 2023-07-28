@@ -9,27 +9,17 @@ import Foundation
 
 //https://weatherstack.com/?utm_source=google&utm_medium=cpc&utm_campaign=weatherstack_search_us_ca&gclid=EAIaIQobChMI5Jiaot2sgAMVZM3CBB3vjgQuEAAYAiAAEgIiHfD_BwE
 
-class WeatherObservation{
-    var weather = "sunny"
-    var temperature = 65
-    var month = 7
-    var year = 2023
-    var dayOfWeek = "Tue"
-    var monthOfYear = "Jul"
-    
-    func getDayOfWeek(m:Int,
-                      y:Int)->String{
-        return "Mon"
-    }
-    func getMonthInYear(m:Int,
-                      y:Int)->String{
-        return "July"
-    }
+enum SelectedPeriod{
+    case day;
+    case week;
+    case month;
+    case year;
 }
 
 class WeatherData{
     var sampleData = Array<WeatherObservation>()
-    
+    static var selectedPeriod = SelectedPeriod.day
+    static var selectedWeatherPeriod:Int = 0
     
     func sampleDataWeek(m:Int,
                          y:Int)->Array<WeatherObservation>{
@@ -64,4 +54,22 @@ class WeatherData{
         return result
     }
     
+}
+
+class WeatherObservation{
+    var weather = "sunny"
+    var temperature = 65
+    var month = 7
+    var year = 2023
+    var dayOfWeek = "Tue"
+    var monthOfYear = "Jul"
+    
+    func getDayOfWeek(m:Int,
+                      y:Int)->String{
+        return "Mon"
+    }
+    func getMonthInYear(m:Int,
+                      y:Int)->String{
+        return "July"
+    }
 }

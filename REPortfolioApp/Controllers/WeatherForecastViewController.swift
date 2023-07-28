@@ -10,6 +10,12 @@ import UIKit
 
 class WeatherForecastViewController:UICollectionViewController{
     
+    //Always show a month, but allow selection to vary
+    
+    func updateForecast(){
+        self.collectionView.reloadData()
+    }
+    
     //Generate the collection view layout -
     
     private func generateLayout() -> UICollectionViewLayout {
@@ -32,7 +38,7 @@ class WeatherForecastViewController:UICollectionViewController{
         return layout
     }
     
-    //Assign the layout - 
+    //Assign the layout -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.setCollectionViewLayout(generateLayout(),animated: false)
@@ -51,8 +57,15 @@ class WeatherForecastViewController:UICollectionViewController{
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weather", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weather", for: indexPath) as! WeatherCollectionCell
+        if indexPath.row == 0 && indexPath.section == 0{
+            cell.iconView?.styleSelected()
+        }
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }
 
