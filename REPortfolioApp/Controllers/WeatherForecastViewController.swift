@@ -25,13 +25,13 @@ class WeatherForecastViewController:UICollectionViewController{
         )
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .absolute(50.0*5),
+            widthDimension: .absolute(40.0*6),
             heightDimension: .absolute(55.0)
         )
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: groupSize,
             subitem: item,
-            count: 5
+            count: 6
         )
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
@@ -49,18 +49,33 @@ class WeatherForecastViewController:UICollectionViewController{
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return 6
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weather", for: indexPath) as! WeatherCollectionCell
-        if indexPath.row == 0 && indexPath.section == 0{
+        cell.iconView?.clearStyles()
+        if WeatherData.selectedWeatherPeriod == 0{
+            if indexPath.row == 0 && indexPath.section == 0{
+                cell.iconView?.styleSelected()
+            }
+        }else if  WeatherData.selectedWeatherPeriod == 1{
+            if indexPath.section == 0{
+                cell.iconView?.styleSelected()
+            }
+            if indexPath.row < 2 && indexPath.section == 1{
+                cell.iconView?.styleSelected()
+            }
+        }else if  WeatherData.selectedWeatherPeriod == 2{
             cell.iconView?.styleSelected()
+        }else{
+            
         }
+        
         return cell
     }
     

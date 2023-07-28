@@ -19,6 +19,13 @@ class WeahterIconView:UIView{
         self.layer.backgroundColor = ThemeColorSeaGreen.cgColor
     }
     
+    func clearStyles(){
+        self.layer.cornerRadius = 5.0
+        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.backgroundColor = UIColor.white.cgColor
+        self.layoutSubviews()
+    }
+    
     func setSunny(value:Float){
         icon?.image = UIImage(named: "sunny")
        // degrees?.text = String(value: "%d",value)
