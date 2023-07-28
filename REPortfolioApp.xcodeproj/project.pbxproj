@@ -22,6 +22,7 @@
 		634A26182A71955000DB7203 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A26172A71955000DB7203 /* WeatherViewController.swift */; };
 		634A261B2A71959000DB7203 /* WeatherIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A261A2A71959000DB7203 /* WeatherIconView.swift */; };
 		636222EC2A7343B700C3EE43 /* WeatherCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636222EB2A7343B700C3EE43 /* WeatherCollectionCell.swift */; };
+		636222EE2A73FEBC00C3EE43 /* notes in Resources */ = {isa = PBXBuildFile; fileRef = 636222ED2A73FEBB00C3EE43 /* notes */; };
 		63680FF22A6AC241003CD155 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63680FF12A6AC241003CD155 /* AppModel.swift */; };
 		637AABF22A68651D00F05C0C /* PhotovoltaicAnalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637AABF12A68651D00F05C0C /* PhotovoltaicAnalizer.swift */; };
 		637AABF52A688C1100F05C0C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637AABF42A688C1100F05C0C /* MenuViewController.swift */; };
@@ -72,6 +73,7 @@
 		634A26172A71955000DB7203 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		634A261A2A71959000DB7203 /* WeatherIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIconView.swift; sourceTree = "<group>"; };
 		636222EB2A7343B700C3EE43 /* WeatherCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCollectionCell.swift; sourceTree = "<group>"; };
+		636222ED2A73FEBB00C3EE43 /* notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = notes; sourceTree = "<group>"; };
 		63680FF12A6AC241003CD155 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		637AABF12A68651D00F05C0C /* PhotovoltaicAnalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotovoltaicAnalizer.swift; sourceTree = "<group>"; };
 		637AABF42A688C1100F05C0C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		6340FFA32A685F240068C35F /* REPortfolioApp */ = {
 			isa = PBXGroup;
 			children = (
+				636222ED2A73FEBB00C3EE43 /* notes */,
 				6340FFA62A685F240068C35F /* SceneDelegate.swift */,
 				6340FFA42A685F240068C35F /* AppDelegate.swift */,
 				6340FFD72A685FF20068C35F /* Model */,
@@ -332,6 +335,7 @@
 			files = (
 				6340FFB42A685F260068C35F /* LaunchScreen.storyboard in Resources */,
 				6340FFB12A685F260068C35F /* Assets.xcassets in Resources */,
+				636222EE2A73FEBC00C3EE43 /* notes in Resources */,
 				6340FFAC2A685F240068C35F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

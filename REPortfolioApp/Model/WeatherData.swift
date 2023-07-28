@@ -20,8 +20,9 @@ class WeatherData{
     var sampleData = Array<WeatherObservation>()
     static var selectedPeriod = SelectedPeriod.day
     static var selectedWeatherPeriod:Int = 0
+    static var selectedDate = NSDate()
     
-    func sampleDataWeek(m:Int,
+    func dataWeek(m:Int,
                          y:Int)->Array<WeatherObservation>{
         var result = Array<WeatherObservation>()
         for k in 1...7{
@@ -32,7 +33,7 @@ class WeatherData{
         return result
     }
     
-    func sampleDataMonth(m:Int,
+    func dataMonth(m:Int,
                          y:Int)->Array<WeatherObservation>{
         var result = Array<WeatherObservation>()
         for k in 1...30{
@@ -43,7 +44,7 @@ class WeatherData{
         return result
     }
     
-    func sampleDataYear(m:Int,
+    func dataYear(m:Int,
                          y:Int)->Array<WeatherObservation>{
         var result = Array<WeatherObservation>()
         for k in 1...12{

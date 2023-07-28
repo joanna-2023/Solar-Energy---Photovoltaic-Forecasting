@@ -1,0 +1,12 @@
+- Display irradiance / temp decomposition
+and total energy output as a remote images.
+
+- See how to save images from python to local server path.
+
+- Total solar energy - ideally for a period or just annual estimate for version 1.
+
+- weather API - show forecast
+
+- 3D modeling - one sample site (advanced version of this app)
+
+- trading component as (separate app)
