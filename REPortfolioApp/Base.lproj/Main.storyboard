@@ -38,7 +38,7 @@
                                 </items>
                             </toolbar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WY-DB-s8J" customClass="CustomContainerView" customModule="REPortfolioApp" customModuleProvider="target">
-                                <rect key="frame" x="270" y="399" width="672" height="351"/>
+                                <rect key="frame" x="270" y="404" width="672" height="346"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="K4O-HY-VpV" kind="embed" id="QfR-D6-CYa"/>
@@ -263,12 +263,12 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4W-pV-Imc" customClass="CustomContainerView" customModule="REPortfolioApp" customModuleProvider="target">
-                                <rect key="frame" x="270" y="64" width="672" height="327"/>
+                                <rect key="frame" x="270" y="64" width="672" height="272"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ir-m4-yQW" customClass="MainMapView" customModule="REPortfolioApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="36" width="672" height="271"/>
+                                        <rect key="frame" x="0.0" y="36" width="672" height="236"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="271" id="yku-Cx-bQU"/>
+                                            <constraint firstAttribute="height" constant="236" id="yku-Cx-bQU"/>
                                         </constraints>
                                         <standardMapConfiguration key="preferredConfiguration"/>
                                     </mapView>
@@ -288,8 +288,8 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9Ir-m4-yQW" secondAttribute="trailing" id="Amr-2d-ehp"/>
-                                    <constraint firstAttribute="height" constant="327" id="Rbv-Zd-FNt"/>
-                                    <constraint firstAttribute="bottom" secondItem="9Ir-m4-yQW" secondAttribute="bottom" constant="20" id="XRb-Xh-4df"/>
+                                    <constraint firstAttribute="height" constant="272" id="Rbv-Zd-FNt"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Ir-m4-yQW" secondAttribute="bottom" id="XRb-Xh-4df"/>
                                     <constraint firstItem="9Ir-m4-yQW" firstAttribute="top" secondItem="X2w-ol-ZQD" secondAttribute="bottom" constant="8" symbolic="YES" id="aWk-Tk-Fyz"/>
                                     <constraint firstItem="X2w-ol-ZQD" firstAttribute="top" secondItem="u4W-pV-Imc" secondAttribute="top" constant="-1" id="fPO-gW-Mcb"/>
                                     <constraint firstItem="X2w-ol-ZQD" firstAttribute="centerX" secondItem="u4W-pV-Imc" secondAttribute="centerX" id="mGd-sP-Wmi"/>
@@ -469,6 +469,16 @@
                                     <constraint firstAttribute="trailing" secondItem="IKX-oi-vyU" secondAttribute="trailing" id="yEi-cw-PCW"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solar Energy Output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miB-qP-gJ3">
+                                <rect key="frame" x="295" y="367" width="623" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="aI4-hz-2JH"/>
+                                    <constraint firstAttribute="width" constant="623" id="tmo-US-OUD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -482,7 +492,9 @@
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="trailing" secondItem="TTL-1M-6nY" secondAttribute="trailing" id="Cuz-xd-fsW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4WY-DB-s8J" secondAttribute="trailing" constant="252" id="H4a-nz-gX5"/>
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kjg-Gp-Qut"/>
-                            <constraint firstItem="4WY-DB-s8J" firstAttribute="top" secondItem="u4W-pV-Imc" secondAttribute="bottom" constant="8" id="M75-H0-hqA"/>
+                            <constraint firstItem="4WY-DB-s8J" firstAttribute="top" secondItem="u4W-pV-Imc" secondAttribute="bottom" constant="68" id="M75-H0-hqA"/>
+                            <constraint firstItem="miB-qP-gJ3" firstAttribute="leading" secondItem="Afg-gA-Ua7" secondAttribute="trailing" constant="45" id="MTq-Sk-KoC"/>
+                            <constraint firstItem="ork-fs-3EQ" firstAttribute="leading" secondItem="miB-qP-gJ3" secondAttribute="trailing" constant="44" id="OiN-AE-L9e"/>
                             <constraint firstItem="NaJ-VW-k3b" firstAttribute="leading" secondItem="4WY-DB-s8J" secondAttribute="trailing" constant="20" id="P8g-EZ-ojq"/>
                             <constraint firstItem="2FI-4u-3F7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rfi-sk-RX1"/>
                             <constraint firstItem="u4W-pV-Imc" firstAttribute="leading" secondItem="Afg-gA-Ua7" secondAttribute="trailing" constant="20" id="Sje-nZ-fDc"/>
@@ -492,6 +504,7 @@
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y5L-b9-2Nj"/>
                             <constraint firstItem="ork-fs-3EQ" firstAttribute="leading" secondItem="u4W-pV-Imc" secondAttribute="trailing" constant="20" id="ZeQ-WL-rGV"/>
                             <constraint firstItem="NaJ-VW-k3b" firstAttribute="top" secondItem="ork-fs-3EQ" secondAttribute="bottom" constant="20" id="faw-B8-Acg"/>
+                            <constraint firstItem="4WY-DB-s8J" firstAttribute="top" secondItem="miB-qP-gJ3" secondAttribute="bottom" constant="8" symbolic="YES" id="h1y-Ja-whh"/>
                             <constraint firstItem="u4W-pV-Imc" firstAttribute="top" secondItem="TTL-1M-6nY" secondAttribute="bottom" constant="20" id="lsw-MN-R7d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ork-fs-3EQ" secondAttribute="trailing" constant="20" id="pAf-OG-Kud"/>
                             <constraint firstItem="Afg-gA-Ua7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vcX-NV-kAI"/>
@@ -581,34 +594,15 @@
             <objects>
                 <viewController id="K4O-HY-VpV" customClass="ForecastAndAnalysisViewController" customModule="REPortfolioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yNk-qg-ads">
-                        <rect key="frame" x="0.0" y="0.0" width="672" height="351"/>
+                        <rect key="frame" x="0.0" y="0.0" width="672" height="346"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solar Irradiance and Total Energy Output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItD-1L-yeB">
-                                <rect key="frame" x="24.5" y="12" width="623" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="623" id="iuE-K8-JRS"/>
-                                    <constraint firstAttribute="height" constant="29" id="scA-iM-wDD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pAn-N2-at0"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ItD-1L-yeB" firstAttribute="centerX" secondItem="yNk-qg-ads" secondAttribute="centerX" id="2x4-zi-Tuc"/>
-                            <constraint firstItem="ItD-1L-yeB" firstAttribute="top" secondItem="yNk-qg-ads" secondAttribute="top" constant="12" id="uhe-aE-Msx"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="chartTitle" destination="ItD-1L-yeB" id="vfJ-Rp-Zs0"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c31-bP-Lz4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.688442211055275" y="541.36690647482021"/>
+            <point key="canvasLocation" x="49" y="546"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="hpH-IK-YxU">
