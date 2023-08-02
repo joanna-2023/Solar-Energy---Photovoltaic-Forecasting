@@ -98,6 +98,46 @@ class WeatherObservation{
             break;
         }
         
+        switch month{
+        case 1:
+            monthOfYear = "Jan"
+            break;
+        case 2:
+            monthOfYear = "Feb"
+            break;
+        case 3:
+            monthOfYear = "Mar"
+            break;
+        case 4:
+            monthOfYear = "Apr"
+            break;
+        case 5:
+            monthOfYear = "May"
+            break;
+        case 6:
+            monthOfYear = "Jun"
+            break;
+        case 7:
+            monthOfYear = "Jul"
+            break;
+        case 8:
+            monthOfYear = "Aug"
+            break;
+        case 9:
+            monthOfYear = "Sep"
+            break;
+        case 10:
+            monthOfYear = "Oct"
+            break;
+        case 11:
+            monthOfYear = "Nov"
+            break;
+        case 12:
+            monthOfYear = "Dec"
+            break;
+        default:
+            break;
+        }
     }
     
     func getDayOfMonth(date:Date)->Int{

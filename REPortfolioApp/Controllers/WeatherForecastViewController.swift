@@ -68,7 +68,7 @@ class WeatherForecastViewController:UICollectionViewController{
         if(indexPath.section * 5 + indexPath.row) <= 30{
             let wo = observations[indexPath.section * 5 + indexPath.row]
             print(wo.dayOfWeek,wo.dayOfMonth, indexPath.section * indexPath.row + indexPath.row)
-            cell.iconView?.date?.text = String(format: "%@,%d", wo.dayOfWeek,wo.dayOfMonth)
+            cell.iconView?.date?.text = String(format: "%@,%d", wo.monthOfYear,wo.dayOfMonth)
         }
         
         //Style based on selection and period choice -
