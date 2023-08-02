@@ -62,7 +62,7 @@ class ViewController: UIViewController {
 
     @IBAction func dayWeekMonthlyWeatherViewChange(control:UISegmentedControl){
         print(control.selectedSegmentIndex)
-        WeatherData.selectedWeatherPeriod = control.selectedSegmentIndex
+        WeatherDataModel.selectedWeatherPeriod = control.selectedSegmentIndex
         weatherForecastVC?.updateForecast()
         
     }

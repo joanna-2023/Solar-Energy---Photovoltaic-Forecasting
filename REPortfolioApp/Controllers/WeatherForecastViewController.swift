@@ -11,14 +11,18 @@ import UIKit
 class WeatherForecastViewController:UICollectionViewController{
     
     var selectedIndexPath:IndexPath = IndexPath(row: 0, section: 0)
-    let weatherModel = WeatherData()
+    let weatherModel = WeatherDataModel()
     var observations = Array<WeatherObservation>()
     //Always show a month, but allow selection to vary
     
     func updateForecast(){
+        //Update the collection view -
         observations = weatherModel.allDaysInMonth()
+        
+        //Load new data for the weather using the Weather API -
+        weatherModel.loadWeatherForSelectedPeriod()
+        
         self.collectionView.reloadData()
-       
     }
     
     //Generate the collection view layout -
@@ -79,7 +83,7 @@ class WeatherForecastViewController:UICollectionViewController{
            indexPath.section == selectedIndexPath.section{
             cell.iconView?.styleSelected()
         }
-        if  WeatherData.selectedWeatherPeriod == 1{
+        if  WeatherDataModel.selectedWeatherPeriod == 1{
             if indexPath.section == startSection &&
                 indexPath.row >= startRow{
                 cell.iconView?.styleSelected()
@@ -90,7 +94,7 @@ class WeatherForecastViewController:UICollectionViewController{
                 }
                
             }
-        }else if  WeatherData.selectedWeatherPeriod == 2{
+        }else if  WeatherDataModel.selectedWeatherPeriod == 2{
             cell.iconView?.styleSelected()
         }else{
             

@@ -16,12 +16,17 @@ enum SelectedPeriod{
     case year;
 }
 
-class WeatherData{
+class WeatherDataModel{
+    var dataLoader = WeatherDataLoader()
     var sampleData = Array<WeatherObservation>()
     static var selectedPeriod = SelectedPeriod.day
     static var selectedWeatherPeriod:Int = 0
     static var selectedDate = Date()
     let calendar = NSCalendar.current
+    
+    func loadWeatherForSelectedPeriod(){
+        dataLoader.loadForecast()
+    }
     
     func daysInMonth()->Int{
         let calendar = Calendar.current
@@ -37,8 +42,8 @@ class WeatherData{
         let totalDays = daysInMonth()
         print("total days in month: ", totalDays)
         //let day = calendar.component(Calendar.Component.day, from: WeatherData.selectedDate)
-        let month = calendar.component(Calendar.Component.month, from: WeatherData.selectedDate)
-        let year = calendar.component(Calendar.Component.year, from: WeatherData.selectedDate)
+        let month = calendar.component(Calendar.Component.month, from: WeatherDataModel.selectedDate)
+        let year = calendar.component(Calendar.Component.year, from: WeatherDataModel.selectedDate)
         for k in 1...totalDays{
             let dateComponents = NSDateComponents()
             dateComponents.day = k

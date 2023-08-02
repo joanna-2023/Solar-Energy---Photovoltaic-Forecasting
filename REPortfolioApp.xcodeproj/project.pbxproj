@@ -33,6 +33,14 @@
 		638100EA2A698928009D9418 /* InputParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638100E92A698928009D9418 /* InputParametersView.swift */; };
 		638100EC2A69893F009D9418 /* SimulationOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638100EB2A69893F009D9418 /* SimulationOutputView.swift */; };
 		638100EE2A698A15009D9418 /* ForecastAndAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638100ED2A698A15009D9418 /* ForecastAndAnalysisViewController.swift */; };
+		638C08E02A7AE3CE00065FBA /* WeatherDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C08DF2A7AE3CE00065FBA /* WeatherDataLoader.swift */; };
+		638C08E22A7AEE5D00065FBA /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C08E12A7AEE5D00065FBA /* BarChart.swift */; };
+		638C08E52A7AEEAE00065FBA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C08E42A7AEEAE00065FBA /* Data.swift */; };
+		638C08E72A7AEF4E00065FBA /* AccessibilityHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C08E62A7AEF4E00065FBA /* AccessibilityHelpers.swift */; };
+		638C08E92A7AEF8700065FBA /* ChartType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C08E82A7AEF8700065FBA /* ChartType.swift */; };
+		638C08EB2A7AF01500065FBA /* SingleLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C08EA2A7AF01500065FBA /* SingleLine.swift */; };
+		638C08ED2A7AF04600065FBA /* ChartInterpolationMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C08EC2A7AF04600065FBA /* ChartInterpolationMethod.swift */; };
+		638C08EF2A7AF08500065FBA /* SingleLineLollipop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C08EE2A7AF08500065FBA /* SingleLineLollipop.swift */; };
 		63C2D22C2A6A214800E37638 /* CustomContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C2D22B2A6A214800E37638 /* CustomContainerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +92,14 @@
 		638100E92A698928009D9418 /* InputParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputParametersView.swift; sourceTree = "<group>"; };
 		638100EB2A69893F009D9418 /* SimulationOutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationOutputView.swift; sourceTree = "<group>"; };
 		638100ED2A698A15009D9418 /* ForecastAndAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastAndAnalysisViewController.swift; sourceTree = "<group>"; };
+		638C08DF2A7AE3CE00065FBA /* WeatherDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataLoader.swift; sourceTree = "<group>"; };
+		638C08E12A7AEE5D00065FBA /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		638C08E42A7AEEAE00065FBA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		638C08E62A7AEF4E00065FBA /* AccessibilityHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityHelpers.swift; sourceTree = "<group>"; };
+		638C08E82A7AEF8700065FBA /* ChartType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartType.swift; sourceTree = "<group>"; };
+		638C08EA2A7AF01500065FBA /* SingleLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLine.swift; sourceTree = "<group>"; };
+		638C08EC2A7AF04600065FBA /* ChartInterpolationMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInterpolationMethod.swift; sourceTree = "<group>"; };
+		638C08EE2A7AF08500065FBA /* SingleLineLollipop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineLollipop.swift; sourceTree = "<group>"; };
 		63C2D22B2A6A214800E37638 /* CustomContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +189,7 @@
 				63680FF12A6AC241003CD155 /* AppModel.swift */,
 				637AABF12A68651D00F05C0C /* PhotovoltaicAnalizer.swift */,
 				634A26152A717C4000DB7203 /* WeatherData.swift */,
+				638C08DF2A7AE3CE00065FBA /* WeatherDataLoader.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,10 +240,25 @@
 		638100E42A698556009D9418 /* UIFactory */ = {
 			isa = PBXGroup;
 			children = (
+				638C08E32A7AEE7400065FBA /* temp */,
 				638100E52A698570009D9418 /* UIFactory.swift */,
 				63C2D22B2A6A214800E37638 /* CustomContainerView.swift */,
+				638C08E12A7AEE5D00065FBA /* BarChart.swift */,
 			);
 			path = UIFactory;
+			sourceTree = "<group>";
+		};
+		638C08E32A7AEE7400065FBA /* temp */ = {
+			isa = PBXGroup;
+			children = (
+				638C08E42A7AEEAE00065FBA /* Data.swift */,
+				638C08E62A7AEF4E00065FBA /* AccessibilityHelpers.swift */,
+				638C08E82A7AEF8700065FBA /* ChartType.swift */,
+				638C08EA2A7AF01500065FBA /* SingleLine.swift */,
+				638C08EC2A7AF04600065FBA /* ChartInterpolationMethod.swift */,
+				638C08EE2A7AF08500065FBA /* SingleLineLollipop.swift */,
+			);
+			path = temp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638C08E02A7AE3CE00065FBA /* WeatherDataLoader.swift in Sources */,
 				633D303F2A72B09D00CD9DE9 /* WeatherForecastViewController.swift in Sources */,
 				634A261B2A71959000DB7203 /* WeatherIconView.swift in Sources */,
 				638100EA2A698928009D9418 /* InputParametersView.swift in Sources */,
@@ -368,10 +401,16 @@
 				63C2D22C2A6A214800E37638 /* CustomContainerView.swift in Sources */,
 				638100EE2A698A15009D9418 /* ForecastAndAnalysisViewController.swift in Sources */,
 				636222EC2A7343B700C3EE43 /* WeatherCollectionCell.swift in Sources */,
+				638C08E72A7AEF4E00065FBA /* AccessibilityHelpers.swift in Sources */,
+				638C08E22A7AEE5D00065FBA /* BarChart.swift in Sources */,
 				637AABF82A68908B00F05C0C /* MenuItem.swift in Sources */,
 				638100EC2A69893F009D9418 /* SimulationOutputView.swift in Sources */,
+				638C08EF2A7AF08500065FBA /* SingleLineLollipop.swift in Sources */,
 				6340FFA92A685F240068C35F /* ViewController.swift in Sources */,
 				634A26162A717C4000DB7203 /* WeatherData.swift in Sources */,
+				638C08ED2A7AF04600065FBA /* ChartInterpolationMethod.swift in Sources */,
+				638C08E52A7AEEAE00065FBA /* Data.swift in Sources */,
+				638C08E92A7AEF8700065FBA /* ChartType.swift in Sources */,
 				637AABF52A688C1100F05C0C /* MenuViewController.swift in Sources */,
 				6340FFAF2A685F240068C35F /* REPortfolioApp.xcdatamodeld in Sources */,
 				638100E82A6987F5009D9418 /* MainMapView.swift in Sources */,
@@ -379,6 +418,7 @@
 				637AABFB2A68973E00F05C0C /* AppTheme.swift in Sources */,
 				6340FFA52A685F240068C35F /* AppDelegate.swift in Sources */,
 				638100E62A698570009D9418 /* UIFactory.swift in Sources */,
+				638C08EB2A7AF01500065FBA /* SingleLine.swift in Sources */,
 				63680FF22A6AC241003CD155 /* AppModel.swift in Sources */,
 				6340FFA72A685F240068C35F /* SceneDelegate.swift in Sources */,
 			);
