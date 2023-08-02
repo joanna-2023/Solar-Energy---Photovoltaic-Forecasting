@@ -38,7 +38,7 @@
                                 </items>
                             </toolbar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WY-DB-s8J" customClass="CustomContainerView" customModule="REPortfolioApp" customModuleProvider="target">
-                                <rect key="frame" x="270" y="505" width="672" height="245"/>
+                                <rect key="frame" x="270" y="399" width="672" height="351"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="K4O-HY-VpV" kind="embed" id="QfR-D6-CYa"/>
@@ -263,12 +263,12 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4W-pV-Imc" customClass="CustomContainerView" customModule="REPortfolioApp" customModuleProvider="target">
-                                <rect key="frame" x="270" y="64" width="672" height="421"/>
+                                <rect key="frame" x="270" y="64" width="672" height="327"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ir-m4-yQW" customClass="MainMapView" customModule="REPortfolioApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="36" width="672" height="385"/>
+                                        <rect key="frame" x="0.0" y="36" width="672" height="271"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="385" id="yku-Cx-bQU"/>
+                                            <constraint firstAttribute="height" constant="271" id="yku-Cx-bQU"/>
                                         </constraints>
                                         <standardMapConfiguration key="preferredConfiguration"/>
                                     </mapView>
@@ -288,8 +288,8 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9Ir-m4-yQW" secondAttribute="trailing" id="Amr-2d-ehp"/>
-                                    <constraint firstAttribute="height" constant="421" id="Rbv-Zd-FNt"/>
-                                    <constraint firstAttribute="bottom" secondItem="9Ir-m4-yQW" secondAttribute="bottom" id="XRb-Xh-4df"/>
+                                    <constraint firstAttribute="height" constant="327" id="Rbv-Zd-FNt"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Ir-m4-yQW" secondAttribute="bottom" constant="20" id="XRb-Xh-4df"/>
                                     <constraint firstItem="9Ir-m4-yQW" firstAttribute="top" secondItem="X2w-ol-ZQD" secondAttribute="bottom" constant="8" symbolic="YES" id="aWk-Tk-Fyz"/>
                                     <constraint firstItem="X2w-ol-ZQD" firstAttribute="top" secondItem="u4W-pV-Imc" secondAttribute="top" constant="-1" id="fPO-gW-Mcb"/>
                                     <constraint firstItem="X2w-ol-ZQD" firstAttribute="centerX" secondItem="u4W-pV-Imc" secondAttribute="centerX" id="mGd-sP-Wmi"/>
@@ -482,7 +482,7 @@
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="trailing" secondItem="TTL-1M-6nY" secondAttribute="trailing" id="Cuz-xd-fsW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4WY-DB-s8J" secondAttribute="trailing" constant="252" id="H4a-nz-gX5"/>
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kjg-Gp-Qut"/>
-                            <constraint firstItem="4WY-DB-s8J" firstAttribute="top" secondItem="u4W-pV-Imc" secondAttribute="bottom" constant="20" id="M75-H0-hqA"/>
+                            <constraint firstItem="4WY-DB-s8J" firstAttribute="top" secondItem="u4W-pV-Imc" secondAttribute="bottom" constant="8" id="M75-H0-hqA"/>
                             <constraint firstItem="NaJ-VW-k3b" firstAttribute="leading" secondItem="4WY-DB-s8J" secondAttribute="trailing" constant="20" id="P8g-EZ-ojq"/>
                             <constraint firstItem="2FI-4u-3F7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rfi-sk-RX1"/>
                             <constraint firstItem="u4W-pV-Imc" firstAttribute="leading" secondItem="Afg-gA-Ua7" secondAttribute="trailing" constant="20" id="Sje-nZ-fDc"/>
@@ -581,7 +581,7 @@
             <objects>
                 <viewController id="K4O-HY-VpV" customClass="ForecastAndAnalysisViewController" customModule="REPortfolioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yNk-qg-ads">
-                        <rect key="frame" x="0.0" y="0.0" width="672" height="245"/>
+                        <rect key="frame" x="0.0" y="0.0" width="672" height="351"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solar Irradiance and Total Energy Output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItD-1L-yeB">
