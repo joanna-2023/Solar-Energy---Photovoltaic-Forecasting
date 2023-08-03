@@ -13,7 +13,7 @@ class ForecastAndAnalysisViewController:UIViewController{
     var chartView:UIView?
 
     override func viewDidLoad() {
-        UIFactory.styleMainSection(section: self.view)
+        //UIFactory.styleMainSection(section: self.view)
         let barChart = SingleBar(isOverview: false)
         let vc = UIHostingController(rootView: barChart)
         chartView = vc.view

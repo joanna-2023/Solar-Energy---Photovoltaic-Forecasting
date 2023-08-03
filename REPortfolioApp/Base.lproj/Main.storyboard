@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="44" id="3I9-5T-cEf"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Green Energy Forecast Generator" id="4cU-VT-MRP"/>
+                                    <navigationItem title="Green Energy Forecast" id="4cU-VT-MRP"/>
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9K-ID-N2Z">
@@ -37,13 +37,6 @@
                                     <barButtonItem title="Settings" id="Yfv-T7-ryT"/>
                                 </items>
                             </toolbar>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WY-DB-s8J" customClass="CustomContainerView" customModule="REPortfolioApp" customModuleProvider="target">
-                                <rect key="frame" x="270" y="404" width="672" height="346"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <segue destination="K4O-HY-VpV" kind="embed" id="QfR-D6-CYa"/>
-                                </connections>
-                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ork-fs-3EQ" customClass="InputParametersView" customModule="REPortfolioApp" customModuleProvider="target">
                                 <rect key="frame" x="962" y="64" width="212" height="523"/>
                                 <subviews>
@@ -220,10 +213,10 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaJ-VW-k3b" customClass="SimulationOutputView" customModule="REPortfolioApp" customModuleProvider="target">
-                                <rect key="frame" x="962" y="607" width="212" height="143"/>
+                                <rect key="frame" x="969.5" y="607" width="204.5" height="143"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generated Forecast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-EM-Jk6">
-                                        <rect key="frame" x="25" y="17" width="162" height="29"/>
+                                        <rect key="frame" x="25" y="17" width="154.5" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="bcf-ge-Keq"/>
                                         </constraints>
@@ -232,7 +225,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Totoal output (Daily):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EL7-pb-Wim">
-                                        <rect key="frame" x="20" y="63" width="172" height="17"/>
+                                        <rect key="frame" x="16.5" y="63" width="172" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="172" id="VDS-Ng-KRD"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="ZtZ-OM-i7G"/>
@@ -242,7 +235,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature efficiency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEQ-fb-OyN">
-                                        <rect key="frame" x="20" y="98" width="172" height="17"/>
+                                        <rect key="frame" x="16.5" y="98" width="172" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="172" id="Vte-bP-V5c"/>
                                         </constraints>
@@ -266,14 +259,14 @@
                                 <rect key="frame" x="270" y="64" width="672" height="272"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ir-m4-yQW" customClass="MainMapView" customModule="REPortfolioApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="36" width="672" height="236"/>
+                                        <rect key="frame" x="0.0" y="21" width="672" height="251"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="236" id="yku-Cx-bQU"/>
+                                            <constraint firstAttribute="height" constant="251" id="yku-Cx-bQU"/>
                                         </constraints>
                                         <standardMapConfiguration key="preferredConfiguration"/>
                                     </mapView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solar Farm Site Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2w-ol-ZQD">
-                                        <rect key="frame" x="240" y="-1" width="192" height="29"/>
+                                        <rect key="frame" x="240" y="-5" width="192" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="192" id="7BB-p5-sc7"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="EFG-1j-vql"/>
@@ -290,8 +283,8 @@
                                     <constraint firstAttribute="trailing" secondItem="9Ir-m4-yQW" secondAttribute="trailing" id="Amr-2d-ehp"/>
                                     <constraint firstAttribute="height" constant="272" id="Rbv-Zd-FNt"/>
                                     <constraint firstAttribute="bottom" secondItem="9Ir-m4-yQW" secondAttribute="bottom" id="XRb-Xh-4df"/>
-                                    <constraint firstItem="9Ir-m4-yQW" firstAttribute="top" secondItem="X2w-ol-ZQD" secondAttribute="bottom" constant="8" symbolic="YES" id="aWk-Tk-Fyz"/>
-                                    <constraint firstItem="X2w-ol-ZQD" firstAttribute="top" secondItem="u4W-pV-Imc" secondAttribute="top" constant="-1" id="fPO-gW-Mcb"/>
+                                    <constraint firstItem="9Ir-m4-yQW" firstAttribute="top" secondItem="X2w-ol-ZQD" secondAttribute="bottom" constant="-3" id="aWk-Tk-Fyz"/>
+                                    <constraint firstItem="X2w-ol-ZQD" firstAttribute="top" secondItem="u4W-pV-Imc" secondAttribute="top" constant="-5" id="fPO-gW-Mcb"/>
                                     <constraint firstItem="X2w-ol-ZQD" firstAttribute="centerX" secondItem="u4W-pV-Imc" secondAttribute="centerX" id="mGd-sP-Wmi"/>
                                     <constraint firstItem="9Ir-m4-yQW" firstAttribute="leading" secondItem="u4W-pV-Imc" secondAttribute="leading" id="piI-SC-V0T"/>
                                 </constraints>
@@ -310,7 +303,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 2023" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mp-Ox-LDL">
-                                        <rect key="frame" x="20.5" y="151" width="189" height="33"/>
+                                        <rect key="frame" x="20.5" y="156" width="189" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="189" id="mFe-fU-n7A"/>
                                             <constraint firstAttribute="height" constant="33" id="wcN-R6-580"/>
@@ -347,62 +340,35 @@
                                         </constraints>
                                     </imageView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FxL-dA-GpA" customClass="CustomContainerView" customModule="REPortfolioApp" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="217" width="214" height="263"/>
+                                        <rect key="frame" x="8" y="231" width="214" height="284"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="263" id="nQ9-I7-lBW"/>
+                                            <constraint firstAttribute="height" constant="284" id="nQ9-I7-lBW"/>
                                             <constraint firstAttribute="width" constant="214" id="yC6-x8-4aa"/>
                                         </constraints>
                                         <connections>
                                             <segue destination="pKx-Gw-igT" kind="embed" identifier="weather-view" id="mox-hc-JIf"/>
                                         </connections>
                                     </containerView>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="E6j-sx-deo">
-                                        <rect key="frame" x="8" y="185" width="214" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="B7Y-bA-e13"/>
-                                            <constraint firstAttribute="width" constant="214" id="tqV-F3-pe4"/>
-                                        </constraints>
-                                        <segments>
-                                            <segment title="Day"/>
-                                            <segment title="Week"/>
-                                            <segment title="Month"/>
-                                        </segments>
-                                        <connections>
-                                            <action selector="dayWeekMonthlyWeatherViewChangeWithControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="jrt-dr-qva"/>
-                                        </connections>
-                                    </segmentedControl>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlu-qH-qLP">
-                                        <rect key="frame" x="8" y="491" width="89" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="Fvg-X0-2MC"/>
-                                            <constraint firstAttribute="height" constant="21" id="qCS-JS-Bue"/>
-                                        </constraints>
-                                        <color key="tintColor" red="0.36340702349999998" green="0.73677704730000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="previous "/>
-                                        <connections>
-                                            <action selector="generateForecast" destination="ork-fs-3EQ" eventType="touchUpInside" id="hL6-NP-deM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb4-XC-dMb">
-                                        <rect key="frame" x="132" y="491" width="90" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="2I1-sg-AKF"/>
-                                            <constraint firstAttribute="width" constant="90" id="74o-3P-Ehs"/>
-                                        </constraints>
-                                        <color key="tintColor" red="0.36340702349999998" green="0.73677704730000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="next"/>
-                                        <connections>
-                                            <action selector="generateForecast" destination="ork-fs-3EQ" eventType="touchUpInside" id="nPP-Kr-YdJ"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presc:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OII-fl-1Fa">
                                         <rect key="frame" x="20" y="111" width="104" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="E6j-sx-deo">
+                                        <rect key="frame" x="8" y="192" width="214" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="B7Y-bA-e13"/>
+                                            <constraint firstAttribute="width" constant="214" id="tqV-F3-pe4"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Signle month"/>
+                                            <segment title="Month to Month"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="dayWeekMonthlyWeatherViewChangeWithControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="jrt-dr-qva"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -410,29 +376,25 @@
                                     <constraint firstItem="pLB-me-tjV" firstAttribute="leading" secondItem="OII-fl-1Fa" secondAttribute="leading" id="1a9-Id-No4"/>
                                     <constraint firstItem="OII-fl-1Fa" firstAttribute="top" secondItem="6hh-Yl-EIM" secondAttribute="bottom" constant="5" id="3Nu-C1-I8B"/>
                                     <constraint firstItem="pLB-me-tjV" firstAttribute="leading" secondItem="6hh-Yl-EIM" secondAttribute="leading" id="5UA-66-p2U"/>
-                                    <constraint firstItem="jlu-qH-qLP" firstAttribute="leading" secondItem="Afg-gA-Ua7" secondAttribute="leading" constant="8" id="6Rl-P1-k1j"/>
                                     <constraint firstItem="pLB-me-tjV" firstAttribute="trailing" secondItem="6hh-Yl-EIM" secondAttribute="trailing" id="7Ys-pA-Du2"/>
-                                    <constraint firstAttribute="bottom" secondItem="jlu-qH-qLP" secondAttribute="bottom" constant="11" id="8ET-Aa-iuP"/>
                                     <constraint firstAttribute="trailing" secondItem="pLB-me-tjV" secondAttribute="trailing" constant="106" id="AsG-gj-Vsg"/>
                                     <constraint firstItem="Twk-hG-3VM" firstAttribute="centerX" secondItem="Afg-gA-Ua7" secondAttribute="centerX" id="Ceg-fE-hQ6"/>
                                     <constraint firstItem="x2e-bX-S5C" firstAttribute="top" secondItem="Twk-hG-3VM" secondAttribute="bottom" constant="18" id="JzU-ln-r8V"/>
-                                    <constraint firstItem="jlu-qH-qLP" firstAttribute="top" secondItem="FxL-dA-GpA" secondAttribute="bottom" constant="11" id="MLm-6o-kjt"/>
-                                    <constraint firstItem="FxL-dA-GpA" firstAttribute="top" secondItem="E6j-sx-deo" secondAttribute="bottom" constant="1" id="NG6-8G-Hfa"/>
-                                    <constraint firstAttribute="bottom" secondItem="Qb4-XC-dMb" secondAttribute="bottom" constant="11" id="OR1-fZ-eRg"/>
+                                    <constraint firstItem="FxL-dA-GpA" firstAttribute="top" secondItem="E6j-sx-deo" secondAttribute="bottom" constant="8" id="NG6-8G-Hfa"/>
                                     <constraint firstAttribute="trailing" secondItem="6hh-Yl-EIM" secondAttribute="trailing" constant="106" id="R7R-zX-C67"/>
                                     <constraint firstItem="4Mp-Ox-LDL" firstAttribute="centerX" secondItem="Afg-gA-Ua7" secondAttribute="centerX" id="WQD-iU-aXW"/>
                                     <constraint firstItem="Twk-hG-3VM" firstAttribute="top" secondItem="Afg-gA-Ua7" secondAttribute="top" constant="3" id="Zyc-dv-BkO"/>
                                     <constraint firstAttribute="width" constant="230" id="aSN-W0-7ok"/>
+                                    <constraint firstAttribute="bottom" secondItem="FxL-dA-GpA" secondAttribute="bottom" constant="8" id="ceX-25-c7K"/>
                                     <constraint firstItem="x2e-bX-S5C" firstAttribute="centerX" secondItem="Afg-gA-Ua7" secondAttribute="centerX" constant="55.5" id="cpa-WM-ES5"/>
                                     <constraint firstItem="pLB-me-tjV" firstAttribute="top" secondItem="x2e-bX-S5C" secondAttribute="top" id="daC-zY-GGv"/>
                                     <constraint firstAttribute="trailing" secondItem="OII-fl-1Fa" secondAttribute="trailing" constant="106" id="fJ2-Ur-mxw"/>
                                     <constraint firstItem="pLB-me-tjV" firstAttribute="trailing" secondItem="OII-fl-1Fa" secondAttribute="trailing" id="otG-at-qPS"/>
                                     <constraint firstItem="6hh-Yl-EIM" firstAttribute="top" secondItem="pLB-me-tjV" secondAttribute="bottom" constant="5" id="rza-dT-okP"/>
-                                    <constraint firstAttribute="trailing" secondItem="Qb4-XC-dMb" secondAttribute="trailing" constant="8" id="siY-f4-OKe"/>
                                     <constraint firstItem="pLB-me-tjV" firstAttribute="leading" secondItem="Afg-gA-Ua7" secondAttribute="leading" constant="20" id="su7-ri-Fta"/>
                                     <constraint firstItem="6hh-Yl-EIM" firstAttribute="top" secondItem="pLB-me-tjV" secondAttribute="bottom" constant="5" id="wPi-Ql-PXu"/>
                                     <constraint firstItem="FxL-dA-GpA" firstAttribute="centerX" secondItem="Afg-gA-Ua7" secondAttribute="centerX" id="yHl-Q1-687"/>
-                                    <constraint firstItem="E6j-sx-deo" firstAttribute="top" secondItem="4Mp-Ox-LDL" secondAttribute="bottom" constant="1" id="ziQ-mK-gsk"/>
+                                    <constraint firstItem="E6j-sx-deo" firstAttribute="top" secondItem="4Mp-Ox-LDL" secondAttribute="bottom" constant="3" id="ziQ-mK-gsk"/>
                                     <constraint firstItem="E6j-sx-deo" firstAttribute="centerX" secondItem="Afg-gA-Ua7" secondAttribute="centerX" id="zzz-zc-zjO"/>
                                 </constraints>
                             </view>
@@ -469,16 +431,38 @@
                                     <constraint firstAttribute="trailing" secondItem="IKX-oi-vyU" secondAttribute="trailing" id="yEi-cw-PCW"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solar Energy Output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miB-qP-gJ3">
-                                <rect key="frame" x="295" y="367" width="623" height="29"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMj-bQ-NxP" customClass="CustomContainerView" customModule="REPortfolioApp" customModuleProvider="target">
+                                <rect key="frame" x="270" y="356" width="672" height="394"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solar Energy Output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miB-qP-gJ3">
+                                        <rect key="frame" x="24" y="-3" width="623" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="aI4-hz-2JH"/>
+                                            <constraint firstAttribute="width" constant="623" id="tmo-US-OUD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WY-DB-s8J" customClass="CustomContainerView" customModule="REPortfolioApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24" width="672" height="346"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="K4O-HY-VpV" kind="embed" id="QfR-D6-CYa"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="aI4-hz-2JH"/>
-                                    <constraint firstAttribute="width" constant="623" id="tmo-US-OUD"/>
+                                    <constraint firstItem="miB-qP-gJ3" firstAttribute="top" secondItem="aMj-bQ-NxP" secondAttribute="top" constant="-3" id="9ga-1h-Vfj"/>
+                                    <constraint firstItem="4WY-DB-s8J" firstAttribute="top" secondItem="aMj-bQ-NxP" secondAttribute="top" constant="24" id="FU4-2C-SFw"/>
+                                    <constraint firstItem="4WY-DB-s8J" firstAttribute="leading" secondItem="aMj-bQ-NxP" secondAttribute="leading" id="Pvu-Np-VUE"/>
+                                    <constraint firstAttribute="bottom" secondItem="4WY-DB-s8J" secondAttribute="bottom" constant="24" id="bop-q1-0Bk"/>
+                                    <constraint firstAttribute="trailing" secondItem="miB-qP-gJ3" secondAttribute="trailing" constant="25" id="gbO-rV-t9W"/>
+                                    <constraint firstAttribute="trailing" secondItem="4WY-DB-s8J" secondAttribute="trailing" id="viI-hV-jX4"/>
+                                    <constraint firstItem="miB-qP-gJ3" firstAttribute="leading" secondItem="aMj-bQ-NxP" secondAttribute="leading" constant="24" id="yCQ-gV-YFc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -488,33 +472,30 @@
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="top" secondItem="NaJ-VW-k3b" secondAttribute="bottom" constant="20" id="4lc-6w-TS0"/>
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Jo-vs-EyP"/>
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="top" secondItem="Afg-gA-Ua7" secondAttribute="bottom" constant="20" id="6y5-Yb-lBi"/>
-                            <constraint firstItem="V9K-ID-N2Z" firstAttribute="top" secondItem="4WY-DB-s8J" secondAttribute="bottom" constant="20" id="AJG-Rk-e9K"/>
+                            <constraint firstItem="aMj-bQ-NxP" firstAttribute="leading" secondItem="Afg-gA-Ua7" secondAttribute="trailing" constant="20" id="AaC-6F-l6Q"/>
+                            <constraint firstItem="V9K-ID-N2Z" firstAttribute="top" secondItem="aMj-bQ-NxP" secondAttribute="bottom" constant="20" id="Az2-ip-IwR"/>
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="trailing" secondItem="TTL-1M-6nY" secondAttribute="trailing" id="Cuz-xd-fsW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4WY-DB-s8J" secondAttribute="trailing" constant="252" id="H4a-nz-gX5"/>
+                            <constraint firstItem="aMj-bQ-NxP" firstAttribute="top" secondItem="u4W-pV-Imc" secondAttribute="bottom" constant="20" id="H6G-Ei-8UL"/>
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kjg-Gp-Qut"/>
-                            <constraint firstItem="4WY-DB-s8J" firstAttribute="top" secondItem="u4W-pV-Imc" secondAttribute="bottom" constant="68" id="M75-H0-hqA"/>
-                            <constraint firstItem="miB-qP-gJ3" firstAttribute="leading" secondItem="Afg-gA-Ua7" secondAttribute="trailing" constant="45" id="MTq-Sk-KoC"/>
-                            <constraint firstItem="ork-fs-3EQ" firstAttribute="leading" secondItem="miB-qP-gJ3" secondAttribute="trailing" constant="44" id="OiN-AE-L9e"/>
-                            <constraint firstItem="NaJ-VW-k3b" firstAttribute="leading" secondItem="4WY-DB-s8J" secondAttribute="trailing" constant="20" id="P8g-EZ-ojq"/>
                             <constraint firstItem="2FI-4u-3F7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rfi-sk-RX1"/>
                             <constraint firstItem="u4W-pV-Imc" firstAttribute="leading" secondItem="Afg-gA-Ua7" secondAttribute="trailing" constant="20" id="Sje-nZ-fDc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaJ-VW-k3b" secondAttribute="trailing" constant="20" id="Smx-1d-4ja"/>
-                            <constraint firstItem="4WY-DB-s8J" firstAttribute="leading" secondItem="Afg-gA-Ua7" secondAttribute="trailing" constant="20" id="UIK-ny-Kmy"/>
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="leading" secondItem="TTL-1M-6nY" secondAttribute="leading" id="Y04-MX-VCc"/>
                             <constraint firstItem="V9K-ID-N2Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y5L-b9-2Nj"/>
                             <constraint firstItem="ork-fs-3EQ" firstAttribute="leading" secondItem="u4W-pV-Imc" secondAttribute="trailing" constant="20" id="ZeQ-WL-rGV"/>
                             <constraint firstItem="NaJ-VW-k3b" firstAttribute="top" secondItem="ork-fs-3EQ" secondAttribute="bottom" constant="20" id="faw-B8-Acg"/>
-                            <constraint firstItem="4WY-DB-s8J" firstAttribute="top" secondItem="miB-qP-gJ3" secondAttribute="bottom" constant="8" symbolic="YES" id="h1y-Ja-whh"/>
                             <constraint firstItem="u4W-pV-Imc" firstAttribute="top" secondItem="TTL-1M-6nY" secondAttribute="bottom" constant="20" id="lsw-MN-R7d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ork-fs-3EQ" secondAttribute="trailing" constant="20" id="pAf-OG-Kud"/>
                             <constraint firstItem="Afg-gA-Ua7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vcX-NV-kAI"/>
                             <constraint firstItem="Afg-gA-Ua7" firstAttribute="top" secondItem="2FI-4u-3F7" secondAttribute="bottom" constant="20" id="vvU-7h-rTL"/>
+                            <constraint firstItem="ork-fs-3EQ" firstAttribute="leading" secondItem="aMj-bQ-NxP" secondAttribute="trailing" constant="20" id="xCh-qb-nFg"/>
                             <constraint firstItem="ork-fs-3EQ" firstAttribute="top" secondItem="TTL-1M-6nY" secondAttribute="bottom" constant="20" id="yYO-SR-JUp"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dayWeekMonth" destination="E6j-sx-deo" id="Th2-eJ-Hng"/>
                         <outlet property="forecastContainer" destination="4WY-DB-s8J" id="C4P-Uh-bPi"/>
+                        <outlet property="forecastOuterContainer" destination="aMj-bQ-NxP" id="cgx-am-uV2"/>
                         <outlet property="inputParameters" destination="ork-fs-3EQ" id="Ys5-Te-6Qj"/>
                         <outlet property="mainMap" destination="9Ir-m4-yQW" id="7MZ-Il-7kL"/>
                         <outlet property="mapContainer" destination="u4W-pV-Imc" id="Ecv-1g-DrI"/>
@@ -587,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ar9-xw-0Lz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-228" y="491"/>
+            <point key="canvasLocation" x="-218" y="-432"/>
         </scene>
         <!--Forecast And Analysis View Controller-->
         <scene sceneID="LvI-EO-YIC">
@@ -602,7 +583,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c31-bP-Lz4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="546"/>
+            <point key="canvasLocation" x="12" y="558"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="hpH-IK-YxU">
@@ -847,38 +828,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7iN-xu-Sdp">
-                            <size key="itemSize" width="56" height="53"/>
+                            <size key="itemSize" width="77" height="77"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="weather" id="UCD-d5-lQV" customClass="WeatherCollectionCell" customModule="REPortfolioApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="My5-VT-zhY">
-                                    <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zt3-Qn-I2N" customClass="WeahterIconView" customModule="REPortfolioApp" customModuleProvider="target">
-                                            <rect key="frame" x="2" y="2" width="36" height="46"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snowy" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-LM-MsQ">
-                                                    <rect key="frame" x="4" y="11" width="29" height="23"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2203544_battery_charge_energy_half_icon" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-LM-MsQ">
+                                                    <rect key="frame" x="11" y="25" width="48" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                    <color key="tintColor" red="0.36340702349999998" green="0.73677704730000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccb-DR-vYA">
-                                                    <rect key="frame" x="5" y="0.0" width="26" height="11"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="58%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyv-2I-cgc">
+                                                    <rect key="frame" x="14" y="53" width="42" height="11"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="58" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyv-2I-cgc">
-                                                    <rect key="frame" x="6" y="36" width="26" height="11"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccb-DR-vYA">
+                                                    <rect key="frame" x="14" y="8" width="43" height="11"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="8"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -892,7 +875,7 @@
                                         </view>
                                     </subviews>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="40" height="50"/>
+                                <size key="customSize" width="70" height="70"/>
                                 <connections>
                                     <outlet property="iconView" destination="zt3-Qn-I2N" id="yTN-r7-RdK"/>
                                 </connections>
@@ -912,10 +895,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2203544_battery_charge_energy_half_icon" width="512" height="512"/>
         <image name="snowy" width="256" height="256"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

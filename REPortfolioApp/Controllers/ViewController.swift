@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         inputParameters?.style()
         simulationOutput?.style()
         mainMap?.style()
-        forecastContainer?.style()
+        //forecastContainer?.style()
         tableContainer?.style()
         weatherContainer?.style()
         forecastOuterContainer?.style()

@@ -20,7 +20,7 @@ class WeatherForecastViewController:UICollectionViewController{
         observations = weatherModel.allDaysInMonth()
         
         //Load new data for the weather using the Weather API -
-        weatherModel.loadWeatherForSelectedPeriod()
+        //weatherModel.loadWeatherForSelectedPeriod()
         
         self.collectionView.reloadData()
     }
@@ -34,13 +34,13 @@ class WeatherForecastViewController:UICollectionViewController{
         )
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .absolute(40.0*6),
-            heightDimension: .absolute(55.0)
+            widthDimension: .absolute(70.0*4),
+            heightDimension: .absolute(70.0)
         )
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: groupSize,
             subitem: item,
-            count: 6
+            count: 4
         )
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
@@ -58,11 +58,11 @@ class WeatherForecastViewController:UICollectionViewController{
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 6
+        return 4
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -98,6 +98,53 @@ class WeatherForecastViewController:UICollectionViewController{
             cell.iconView?.styleSelected()
         }else{
             
+        }
+        
+        
+        if indexPath.section == 0{
+            if indexPath.row == 0{
+                cell.iconView?.date?.text="Jan"
+                cell.iconView?.degrees?.text="59%"
+            }else if indexPath.row == 1{
+                cell.iconView?.date?.text="Feb"
+                cell.iconView?.degrees?.text="59%"
+            }else if indexPath.row == 2{
+                cell.iconView?.date?.text="Mar"
+                cell.iconView?.degrees?.text="59%"
+            }
+        }else if indexPath.section == 1{
+            if indexPath.row == 0{
+                cell.iconView?.date?.text="Apr"
+                cell.iconView?.degrees?.text="99%"
+            }else if indexPath.row == 1{
+                cell.iconView?.date?.text="May"
+                cell.iconView?.degrees?.text="99%"
+            }else if indexPath.row == 2{
+                cell.iconView?.date?.text="Jun"
+                cell.iconView?.degrees?.text="99%"
+            }
+        }else if indexPath.section == 2{
+            if indexPath.row == 0{
+                cell.iconView?.date?.text="Jul"
+                cell.iconView?.degrees?.text="99%"
+            }else if indexPath.row == 1{
+                cell.iconView?.date?.text="Aug"
+                cell.iconView?.degrees?.text="99%"
+            }else if indexPath.row == 2{
+                cell.iconView?.date?.text="Sep"
+                cell.iconView?.degrees?.text="99%"
+            }
+        }else if indexPath.section == 3{
+            if indexPath.row == 0{
+                cell.iconView?.date?.text="Oct"
+                cell.iconView?.degrees?.text="65%"
+            }else if indexPath.row == 1{
+                cell.iconView?.date?.text="Nov"
+                cell.iconView?.degrees?.text="65%"
+            }else if indexPath.row == 2{
+                cell.iconView?.date?.text="Dec"
+                cell.iconView?.degrees?.text="65%"
+            }
         }
         
         return cell
