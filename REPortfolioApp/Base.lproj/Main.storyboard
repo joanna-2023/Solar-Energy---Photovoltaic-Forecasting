@@ -19,7 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTL-1M-6nY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="solar" translatesAutoresizingMaskIntoConstraints="NO" id="hvo-Ng-cuD">
+                                <rect key="frame" x="0.0" y="44" width="1194" height="910"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTL-1M-6nY">
                                 <rect key="frame" x="0.0" y="0.0" width="1194" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="3I9-5T-cEf"/>
@@ -28,15 +31,6 @@
                                     <navigationItem title="Green Energy Forecast" id="4cU-VT-MRP"/>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9K-ID-N2Z">
-                                <rect key="frame" x="0.0" y="770" width="1194" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="mFC-gn-scU"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem title="Settings" id="Yfv-T7-ryT"/>
-                                </items>
-                            </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ork-fs-3EQ" customClass="InputParametersView" customModule="REPortfolioApp" customModuleProvider="target">
                                 <rect key="frame" x="962" y="64" width="212" height="523"/>
                                 <subviews>
@@ -172,7 +166,7 @@
                                         </connections>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.89758381620000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="s7R-vu-PDl" firstAttribute="top" secondItem="WUL-dD-YsO" secondAttribute="bottom" constant="8" symbolic="YES" id="2tp-rZ-gXI"/>
                                     <constraint firstItem="SRw-t1-LHW" firstAttribute="centerX" secondItem="ork-fs-3EQ" secondAttribute="centerX" id="5kl-n0-oyr"/>
@@ -213,7 +207,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaJ-VW-k3b" customClass="SimulationOutputView" customModule="REPortfolioApp" customModuleProvider="target">
-                                <rect key="frame" x="969.5" y="607" width="204.5" height="143"/>
+                                <rect key="frame" x="962" y="607" width="212" height="207"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generated Forecast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-EM-Jk6">
                                         <rect key="frame" x="25" y="17" width="154.5" height="29"/>
@@ -244,13 +238,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.89758381620000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="gQD-EM-Jk6" secondAttribute="trailing" constant="25" id="9RM-A9-rqk"/>
+                                    <constraint firstAttribute="trailing" secondItem="gQD-EM-Jk6" secondAttribute="trailing" constant="32.5" id="9RM-A9-rqk"/>
                                     <constraint firstItem="gQD-EM-Jk6" firstAttribute="leading" secondItem="NaJ-VW-k3b" secondAttribute="leading" constant="25" id="BHI-JF-Jbo"/>
                                     <constraint firstItem="yEQ-fb-OyN" firstAttribute="top" secondItem="EL7-pb-Wim" secondAttribute="bottom" constant="18" id="KkS-Jk-ceQ"/>
-                                    <constraint firstItem="yEQ-fb-OyN" firstAttribute="centerX" secondItem="NaJ-VW-k3b" secondAttribute="centerX" id="MIK-WG-kBj"/>
-                                    <constraint firstItem="EL7-pb-Wim" firstAttribute="centerX" secondItem="NaJ-VW-k3b" secondAttribute="centerX" id="cfz-dx-vuP"/>
+                                    <constraint firstItem="yEQ-fb-OyN" firstAttribute="centerX" secondItem="NaJ-VW-k3b" secondAttribute="centerX" constant="-3.5" id="MIK-WG-kBj"/>
+                                    <constraint firstItem="EL7-pb-Wim" firstAttribute="centerX" secondItem="NaJ-VW-k3b" secondAttribute="centerX" constant="-3.5" id="cfz-dx-vuP"/>
                                     <constraint firstItem="gQD-EM-Jk6" firstAttribute="top" secondItem="NaJ-VW-k3b" secondAttribute="top" constant="17" id="isD-FM-zdT"/>
                                     <constraint firstItem="EL7-pb-Wim" firstAttribute="top" secondItem="gQD-EM-Jk6" secondAttribute="bottom" constant="17" id="yfF-V1-sql"/>
                                 </constraints>
@@ -278,7 +272,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="0.89758381620000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9Ir-m4-yQW" secondAttribute="trailing" id="Amr-2d-ehp"/>
                                     <constraint firstAttribute="height" constant="272" id="Rbv-Zd-FNt"/>
@@ -290,7 +284,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Afg-gA-Ua7" customClass="CustomContainerView" customModule="REPortfolioApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="227" width="230" height="523"/>
+                                <rect key="frame" x="20" y="227" width="230" height="587"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Weather Conditions for Tucson" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twk-hG-3VM">
                                         <rect key="frame" x="20.5" y="3" width="189" height="41"/>
@@ -370,9 +364,9 @@
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.89758381622516559" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="523" id="1Z4-7i-1IW"/>
+                                    <constraint firstAttribute="height" constant="587" id="1Z4-7i-1IW"/>
                                     <constraint firstItem="pLB-me-tjV" firstAttribute="leading" secondItem="OII-fl-1Fa" secondAttribute="leading" id="1a9-Id-No4"/>
                                     <constraint firstItem="OII-fl-1Fa" firstAttribute="top" secondItem="6hh-Yl-EIM" secondAttribute="bottom" constant="5" id="3Nu-C1-I8B"/>
                                     <constraint firstItem="pLB-me-tjV" firstAttribute="leading" secondItem="6hh-Yl-EIM" secondAttribute="leading" id="5UA-66-p2U"/>
@@ -385,7 +379,7 @@
                                     <constraint firstItem="4Mp-Ox-LDL" firstAttribute="centerX" secondItem="Afg-gA-Ua7" secondAttribute="centerX" id="WQD-iU-aXW"/>
                                     <constraint firstItem="Twk-hG-3VM" firstAttribute="top" secondItem="Afg-gA-Ua7" secondAttribute="top" constant="3" id="Zyc-dv-BkO"/>
                                     <constraint firstAttribute="width" constant="230" id="aSN-W0-7ok"/>
-                                    <constraint firstAttribute="bottom" secondItem="FxL-dA-GpA" secondAttribute="bottom" constant="8" id="ceX-25-c7K"/>
+                                    <constraint firstAttribute="bottom" secondItem="FxL-dA-GpA" secondAttribute="bottom" constant="72" id="ceX-25-c7K"/>
                                     <constraint firstItem="x2e-bX-S5C" firstAttribute="centerX" secondItem="Afg-gA-Ua7" secondAttribute="centerX" constant="55.5" id="cpa-WM-ES5"/>
                                     <constraint firstItem="pLB-me-tjV" firstAttribute="top" secondItem="x2e-bX-S5C" secondAttribute="top" id="daC-zY-GGv"/>
                                     <constraint firstAttribute="trailing" secondItem="OII-fl-1Fa" secondAttribute="trailing" constant="106" id="fJ2-Ur-mxw"/>
@@ -419,7 +413,7 @@
                                         </connections>
                                     </containerView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="0.89758381620000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="143" id="MJ4-Fc-aVR"/>
                                     <constraint firstAttribute="width" constant="230" id="VDC-cy-XBv"/>
@@ -432,7 +426,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMj-bQ-NxP" customClass="CustomContainerView" customModule="REPortfolioApp" customModuleProvider="target">
-                                <rect key="frame" x="270" y="356" width="672" height="394"/>
+                                <rect key="frame" x="270" y="356" width="672" height="458"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solar Energy Output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miB-qP-gJ3">
                                         <rect key="frame" x="24" y="-3" width="623" height="29"/>
@@ -445,19 +439,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WY-DB-s8J" customClass="CustomContainerView" customModule="REPortfolioApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24" width="672" height="346"/>
+                                        <rect key="frame" x="0.0" y="24" width="672" height="434"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <segue destination="K4O-HY-VpV" kind="embed" id="QfR-D6-CYa"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="0.89758381620000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="miB-qP-gJ3" firstAttribute="top" secondItem="aMj-bQ-NxP" secondAttribute="top" constant="-3" id="9ga-1h-Vfj"/>
                                     <constraint firstItem="4WY-DB-s8J" firstAttribute="top" secondItem="aMj-bQ-NxP" secondAttribute="top" constant="24" id="FU4-2C-SFw"/>
                                     <constraint firstItem="4WY-DB-s8J" firstAttribute="leading" secondItem="aMj-bQ-NxP" secondAttribute="leading" id="Pvu-Np-VUE"/>
-                                    <constraint firstAttribute="bottom" secondItem="4WY-DB-s8J" secondAttribute="bottom" constant="24" id="bop-q1-0Bk"/>
+                                    <constraint firstAttribute="bottom" secondItem="4WY-DB-s8J" secondAttribute="bottom" id="bop-q1-0Bk"/>
                                     <constraint firstAttribute="trailing" secondItem="miB-qP-gJ3" secondAttribute="trailing" constant="25" id="gbO-rV-t9W"/>
                                     <constraint firstAttribute="trailing" secondItem="4WY-DB-s8J" secondAttribute="trailing" id="viI-hV-jX4"/>
                                     <constraint firstItem="miB-qP-gJ3" firstAttribute="leading" secondItem="aMj-bQ-NxP" secondAttribute="leading" constant="24" id="yCQ-gV-YFc"/>
@@ -465,30 +459,27 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2FI-4u-3F7" firstAttribute="top" secondItem="TTL-1M-6nY" secondAttribute="bottom" constant="20" id="1CQ-aF-QAh"/>
                             <constraint firstItem="TTL-1M-6nY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-24" id="1ai-NC-dAk"/>
-                            <constraint firstItem="V9K-ID-N2Z" firstAttribute="top" secondItem="NaJ-VW-k3b" secondAttribute="bottom" constant="20" id="4lc-6w-TS0"/>
-                            <constraint firstItem="V9K-ID-N2Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Jo-vs-EyP"/>
-                            <constraint firstItem="V9K-ID-N2Z" firstAttribute="top" secondItem="Afg-gA-Ua7" secondAttribute="bottom" constant="20" id="6y5-Yb-lBi"/>
+                            <constraint firstItem="NaJ-VW-k3b" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="52E-IY-jpM"/>
+                            <constraint firstItem="hvo-Ng-cuD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6EU-Mv-Y26"/>
                             <constraint firstItem="aMj-bQ-NxP" firstAttribute="leading" secondItem="Afg-gA-Ua7" secondAttribute="trailing" constant="20" id="AaC-6F-l6Q"/>
-                            <constraint firstItem="V9K-ID-N2Z" firstAttribute="top" secondItem="aMj-bQ-NxP" secondAttribute="bottom" constant="20" id="Az2-ip-IwR"/>
-                            <constraint firstItem="V9K-ID-N2Z" firstAttribute="trailing" secondItem="TTL-1M-6nY" secondAttribute="trailing" id="Cuz-xd-fsW"/>
                             <constraint firstItem="aMj-bQ-NxP" firstAttribute="top" secondItem="u4W-pV-Imc" secondAttribute="bottom" constant="20" id="H6G-Ei-8UL"/>
-                            <constraint firstItem="V9K-ID-N2Z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kjg-Gp-Qut"/>
                             <constraint firstItem="2FI-4u-3F7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rfi-sk-RX1"/>
                             <constraint firstItem="u4W-pV-Imc" firstAttribute="leading" secondItem="Afg-gA-Ua7" secondAttribute="trailing" constant="20" id="Sje-nZ-fDc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaJ-VW-k3b" secondAttribute="trailing" constant="20" id="Smx-1d-4ja"/>
-                            <constraint firstItem="V9K-ID-N2Z" firstAttribute="leading" secondItem="TTL-1M-6nY" secondAttribute="leading" id="Y04-MX-VCc"/>
-                            <constraint firstItem="V9K-ID-N2Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y5L-b9-2Nj"/>
                             <constraint firstItem="ork-fs-3EQ" firstAttribute="leading" secondItem="u4W-pV-Imc" secondAttribute="trailing" constant="20" id="ZeQ-WL-rGV"/>
                             <constraint firstItem="NaJ-VW-k3b" firstAttribute="top" secondItem="ork-fs-3EQ" secondAttribute="bottom" constant="20" id="faw-B8-Acg"/>
+                            <constraint firstItem="aMj-bQ-NxP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jSB-qV-gTw"/>
                             <constraint firstItem="u4W-pV-Imc" firstAttribute="top" secondItem="TTL-1M-6nY" secondAttribute="bottom" constant="20" id="lsw-MN-R7d"/>
+                            <constraint firstItem="hvo-Ng-cuD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="olB-zR-VAO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ork-fs-3EQ" secondAttribute="trailing" constant="20" id="pAf-OG-Kud"/>
                             <constraint firstItem="Afg-gA-Ua7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vcX-NV-kAI"/>
                             <constraint firstItem="Afg-gA-Ua7" firstAttribute="top" secondItem="2FI-4u-3F7" secondAttribute="bottom" constant="20" id="vvU-7h-rTL"/>
                             <constraint firstItem="ork-fs-3EQ" firstAttribute="leading" secondItem="aMj-bQ-NxP" secondAttribute="trailing" constant="20" id="xCh-qb-nFg"/>
+                            <constraint firstItem="hvo-Ng-cuD" firstAttribute="top" secondItem="TTL-1M-6nY" secondAttribute="bottom" id="y3v-pm-8cI"/>
                             <constraint firstItem="ork-fs-3EQ" firstAttribute="top" secondItem="TTL-1M-6nY" secondAttribute="bottom" constant="20" id="yYO-SR-JUp"/>
                         </constraints>
                     </view>
@@ -575,7 +566,7 @@
             <objects>
                 <viewController id="K4O-HY-VpV" customClass="ForecastAndAnalysisViewController" customModule="REPortfolioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yNk-qg-ads">
-                        <rect key="frame" x="0.0" y="0.0" width="672" height="346"/>
+                        <rect key="frame" x="0.0" y="0.0" width="672" height="370"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="pAn-N2-at0"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -897,6 +888,7 @@
     <resources>
         <image name="2203544_battery_charge_energy_half_icon" width="512" height="512"/>
         <image name="snowy" width="256" height="256"/>
+        <image name="solar" width="1448" height="910"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -904,6 +896,9 @@
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
