@@ -1,8 +1,11 @@
+Offline:
+
 - Show months as returned by the API in the swift chart.
 
 - Selection should be month to month or a single month -
 i.e. as the output of the forecast. 
 
+- Email or Share PDF file:
 - Include Cocoapods - Alamofore*
 https://cocoapods.org/pods/PDFGenerator
 
