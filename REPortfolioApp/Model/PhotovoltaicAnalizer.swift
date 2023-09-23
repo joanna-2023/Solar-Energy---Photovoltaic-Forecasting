@@ -22,11 +22,8 @@ class PVSimulationAnalysis: ObservableObject{
         // LOCAL:
         // http://127.0.0.1:5000/energyGeneration
         
-        //REMOTE:
-        //"https://joannanikolova2023.pythonanywhere.com"
-        
-        
-        var baseURL = "http://127.0.0.1:5000/energyGeneration"
+    
+        let baseURL = "https://jane2023.pythonanywhere.com/"//"http://127.0.0.1:5000/energyGeneration"
         guard var urlComponents = URLComponents(string: baseURL) else{
             return print("error")
         }
@@ -52,6 +49,7 @@ class PVSimulationAnalysis: ObservableObject{
         //This will return the PV estimate:
         
         // Make the API call
+        print("query to remote python API:", url)
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             DispatchQueue.main.async {
                 guard error == nil, let data = data else {

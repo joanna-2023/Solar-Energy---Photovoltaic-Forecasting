@@ -1,6 +1,3 @@
-
-# A very simple Flask Hello World app for you to get started with...
-
 from flask import Flask
 from pvlib import pvsystem
 import numpy as np
@@ -11,20 +8,20 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from flask import request, jsonify
 
-app = Flask(__name__)
+class SolarModels:
 
-@app.route('/test')
-def hello_world():
-    return 'Hello from Flask!'
+    def __init__(self):
+        print('Solar models')
 
+    def sampleOutput(self):
+        return "hello world"
 
-def energyConsumptionForSite(lat,
+    def energyConsumptionForSite(self,lat,
                                 lon,
                                 numModules,
                                 siteName,
                                 timeZone):
         coordinates = [(lat, lon, siteName, numModules, timeZone)]
-        #coordinates = [(35.1, -106.6, 'Albuquerque', 1500, 'Etc/GMT+7')]
                     #(35.1, -106.6, 'Albuquerque', 1500, 'Etc/GMT+7'),
                     #(37.8, -122.4, 'San Francisco', 10, 'Etc/GMT+8'),
                     #(52.5, 13.4, 'Berlin', 34, 'Etc/GMT-1')]
@@ -104,26 +101,7 @@ def energyConsumptionForSite(lat,
             energies = pd.Series(energies)
 
         print(energies[0])
-        result_from_query = str(energies[0])
-
-        return  result_from_query;
-
-@app.route('/')
-def computeEnergyGeneration():
-
-    #query_parameters = request.args
-    lat = 39#query_parameters.get('lat')
-    long = -110#query_parameters.get('long')
-    numModules = 50#query_parameters.get('numModules')
-    siteName = 'site'#query_parameters.get('siteName')
-    gmtZone = 'Etc/GMT+7'#query_parameters.get('gmtZone')
-
-    result = energyConsumptionForSite(float(lat),
-                                     float(long),
-                                     int(numModules),
-                                     siteName,
-                                     gmtZone)
-    return  result
-
-def test():
-    return 'this is a test'
+        tuscon = str(energies[0])
+        #energies.plot(kind='bar', rot = 0)
+        #plt.ylabel('Yearly energy yield (W hr)')
+        return  tuscon;#'Canadian_Solar_CS5P_220M___2009_: 1234'
